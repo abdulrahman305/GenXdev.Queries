@@ -2,7 +2,7 @@
 Part of PowerShell module : GenXdev.Queries.Webbrowser
 Original cmdlet filename  : Open-GithubQuery.ps1
 Original author           : René Vaessen / GenXdev
-Version                   : 1.300.2025
+Version                   : 1.302.2025
 ################################################################################
 Copyright (c)  René Vaessen / GenXdev
 
@@ -18,7 +18,6 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ################################################################################>
-################################################################################
 <#
 .SYNOPSIS
 Opens a Github repository search query in a web browser or executes advanced
@@ -232,16 +231,16 @@ function Open-GithubQuery {
             ValueFromPipeline = $true,
             ValueFromPipelineByPropertyName = $true,
             HelpMessage = ('The search queries to execute on Github. Supports ' +
-            'multiple queries and pipeline input for batch searching. Each ' +
-            'query will be URL-encoded and used to search Github.')
-            )
-            ]
+                'multiple queries and pipeline input for batch searching. Each ' +
+                'query will be URL-encoded and used to search Github.')
+        )
+        ]
         [string[]] $Query,
         ########################################################################
         [Parameter(
             Mandatory = $false,
             HelpMessage = ("The major category to search. Defaults to 'Code'.")
-            )
+        )
         ]
         [ValidateSet(
             'Repository',
@@ -253,14 +252,14 @@ function Open-GithubQuery {
             'Discussion',
             'Topic',
             'Wiki'
-            )
+        )
         ]
         [string] $Type = 'Code',
         ########################################################################
         [Parameter(
-        Mandatory = $false,
-        HelpMessage = ('Field(s) to search. Only valid options for the ' +
-        'selected Type will be accepted.')
+            Mandatory = $false,
+            HelpMessage = ('Field(s) to search. Only valid options for the ' +
+                'selected Type will be accepted.')
         )]
         [ValidateSet(
             'Name',
@@ -281,7 +280,7 @@ function Open-GithubQuery {
         [Parameter(
             Mandatory = $false,
             HelpMessage = ("Restrict the search to a user's resources (repos, " +
-            'code, issues, etc.).')
+                'code, issues, etc.).')
         )]
         [string] $User,
         ########################################################################
@@ -294,50 +293,50 @@ function Open-GithubQuery {
         [Parameter(
             Mandatory = $false,
             HelpMessage = ("Restrict search to a named repository " +
-            "('owner/repo').")
-            )]
+                "('owner/repo').")
+        )]
         [string] $Repo,
         ########################################################################
         [Parameter(
             Mandatory = $false,
             ParameterSetName = 'Code',
             HelpMessage = ('Restrict code search to specific file or directory ' +
-            'paths (supports wildcards per GitHub Search Syntax).')
-            )]
+                'paths (supports wildcards per GitHub Search Syntax).')
+        )]
         [string] $Path,
         ########################################################################
         [Parameter(
             Mandatory = $false,
             ParameterSetName = 'Code',
             HelpMessage = 'Filter results by the filename (not path).'
-            )]
+        )]
         [string] $Filename,
         ########################################################################
         [Parameter(
             Mandatory = $false,
             ParameterSetName = 'Code',
             HelpMessage = 'Restrict code search to file extensions.'
-            )]
+        )]
         [string] $Extension,
         ########################################################################
         [Parameter(
             Mandatory = $false,
             HelpMessage = 'Filter by programming language.'
-            )]
+        )]
         [string] $Language,
         ########################################################################
         [Parameter(
             Mandatory = $false,
             HelpMessage = ('File/repo size. Supports numeric and range syntax ' +
-            '(see examples).')
-            )]
+                '(see examples).')
+        )]
         [string] $Size,
         ########################################################################
         [Parameter(
             Mandatory = $false,
             ParameterSetName = 'Issue',
             HelpMessage = 'For issues/PR.'
-            )]
+        )]
         [ValidateSet('open', 'closed', 'all')]
         [string] $State,
         ########################################################################
@@ -345,22 +344,22 @@ function Open-GithubQuery {
             Mandatory = $false,
             ParameterSetName = 'Issue',
             HelpMessage = ('Issues/PR: limit to those created by a specified ' +
-            'user.')
-            )]
+                'user.')
+        )]
         [string] $Author,
         ########################################################################
         [Parameter(
             Mandatory = $false,
             ParameterSetName = 'Issue',
             HelpMessage = 'Issues/PR: limit to those assigned a user.'
-            )]
+        )]
         [string] $Assignee,
         ########################################################################
         [Parameter(
             Mandatory = $false,
             ParameterSetName = 'Issue',
             HelpMessage = ('Issues/PR: must be labeled with all specified ' +
-            'strings.')
+                'strings.')
         )]
         [string[]] $Labels,
         ########################################################################
@@ -368,35 +367,35 @@ function Open-GithubQuery {
             Mandatory = $false,
             ParameterSetName = 'Issue',
             HelpMessage = ('Issues/PR: must lack certain metadata (e.g., label, ' +
-            'milestone).')
-            )]
+                'milestone).')
+        )]
         [string[]] $No,
         ########################################################################
         [Parameter(
             Mandatory = $false,
             HelpMessage = ('Sort field (depends on Type). E.g., "stars", ' +
-            '"forks", "updated", etc.')
-            )]
+                '"forks", "updated", etc.')
+        )]
         [string] $SortBy,
         ########################################################################
         [Parameter(
             Mandatory = $false,
             HelpMessage = '"asc" or "desc" order for sorting.'
-            )]
+        )]
         [ValidateSet('asc', 'desc')]
         [string] $Order,
         ########################################################################
         [Parameter(
             Mandatory = $false,
             HelpMessage = 'Page size (max 100).'
-            )]
+        )]
         [ValidateRange(1, 100)]
         [int] $PerPage = 10,
         ########################################################################
         [Parameter(
             Mandatory = $false,
             HelpMessage = 'Page number for paged results.'
-            )]
+        )]
         [ValidateRange(1, 1000)]
         [int] $Page = 1,
         ########################################################################
@@ -404,14 +403,14 @@ function Open-GithubQuery {
             Mandatory = $false,
             ParameterSetName = 'Api',
             HelpMessage = ('GitHub OAuth or Personal Access Token. If not ' +
-            'supplied, uses GITHUB_TOKEN or environment variable.')
-            )]
+                'supplied, uses GITHUB_TOKEN or environment variable.')
+        )]
         [string] $Token,
         ########################################################################
         [Parameter(
             Mandatory = $false,
             HelpMessage = 'Set the browser accept-lang http header.'
-            )]
+        )]
         [Alias('lang', 'locale')]
         [string] $AcceptLang = $null,
         ########################################################################
@@ -419,8 +418,8 @@ function Open-GithubQuery {
             Mandatory = $false,
             ParameterSetName = 'Web',
             HelpMessage = ('Delay between sending different key sequences in ' +
-            'milliseconds.')
-            )]
+                'milliseconds.')
+        )]
         [Alias('DelayMilliSeconds')]
         [int] $SendKeyDelayMilliSeconds,
         ########################################################################
@@ -428,8 +427,8 @@ function Open-GithubQuery {
             Mandatory = $false,
             ParameterSetName = 'Web',
             HelpMessage = ('The monitor to display results on. 0 = default, ' +
-            '-1 = discard, -2 = secondary.')
-            )]
+                '-1 = discard, -2 = secondary.')
+        )]
         [Alias('m', 'mon')]
         [int] $Monitor = -1,
         ########################################################################
@@ -437,72 +436,72 @@ function Open-GithubQuery {
             Mandatory = $false,
             ParameterSetName = 'Web',
             HelpMessage = 'The initial width of the browser window.'
-            )]
+        )]
         [int] $Width = -1,
         ########################################################################
         [Parameter(
             Mandatory = $false,
             ParameterSetName = 'Web',
             HelpMessage = 'The initial height of the browser window.'
-            )]
+        )]
         [int] $Height = -1,
         ########################################################################
         [Parameter(
             Mandatory = $false,
             ParameterSetName = 'Web',
             HelpMessage = 'The initial X position of the browser window.'
-            )]
+        )]
         [int] $X = -999999,
         ########################################################################
         [Parameter(
             Mandatory = $false,
             ParameterSetName = 'Web',
             HelpMessage = 'The initial Y position of the browser window.'
-            )]
+        )]
         [int] $Y = -999999,
         ########################################################################
         [Parameter(
             Mandatory = $false,
             ParameterSetName = 'Web',
             HelpMessage = ('Keystrokes to send to the browser window, see ' +
-            'documentation for cmdlet GenXdev.Windows\Send-Key.')
-            )]
+                'documentation for cmdlet GenXdev.Windows\Send-Key.')
+        )]
         [string[]] $KeysToSend,
         ########################################################################
         [Parameter(
             Mandatory = $false,
             HelpMessage = 'Only match case-sensitive results (where supported).'
-            )]
+        )]
         [switch] $CaseSensitive,
         ########################################################################
         [Parameter(
             Mandatory = $false,
             ParameterSetName = 'Api',
             HelpMessage = ('Run the search asynchronously as a PowerShell ' +
-            'job.')
-            )]
+                'job.')
+        )]
         [switch] $AsJob,
         ########################################################################
         [Parameter(
             Mandatory = $false,
             ParameterSetName = 'Api',
             HelpMessage = 'Output raw JSON result from the API.'
-            )]
+        )]
         [switch] $RawResponse,
         ########################################################################
         [Parameter(
             Mandatory = $false,
             ParameterSetName = 'Api',
             HelpMessage = 'Use API mode instead of opening in web browser.'
-            )]
+        )]
         [switch] $Api,
         ########################################################################
         [Parameter(
             Mandatory = $false,
             ParameterSetName = 'Web',
             HelpMessage = ('Opens the browser in private/incognito browsing ' +
-            'mode for anonymous searching.')
-            )]
+                'mode for anonymous searching.')
+        )]
         [Alias('incognito', 'inprivate')]
         [switch] $Private,
         ########################################################################
@@ -510,15 +509,15 @@ function Open-GithubQuery {
             Mandatory = $false,
             ParameterSetName = 'Web',
             HelpMessage = ('Force enable debugging port, stopping existing ' +
-            'browsers if needed.')
-            )]
+                'browsers if needed.')
+        )]
         [switch] $Force,
         ########################################################################
         [Parameter(
             Mandatory = $false,
             ParameterSetName = 'Web',
             HelpMessage = 'Opens the search results in Microsoft Edge browser.'
-            )]
+        )]
         [Alias('e')]
         [switch] $Edge,
         ########################################################################
@@ -526,7 +525,7 @@ function Open-GithubQuery {
             Mandatory = $false,
             ParameterSetName = 'Web',
             HelpMessage = 'Opens the search results in Google Chrome browser.'
-            )]
+        )]
         [Alias('ch')]
         [switch] $Chrome,
         ########################################################################
@@ -534,8 +533,8 @@ function Open-GithubQuery {
             Mandatory = $false,
             ParameterSetName = 'Web',
             HelpMessage = ('Opens the search results in Microsoft Edge or ' +
-            'Google Chrome, depending on what the default browser is.')
-            )]
+                'Google Chrome, depending on what the default browser is.')
+        )]
         [Alias('c')]
         [switch] $Chromium,
         ########################################################################
@@ -543,23 +542,23 @@ function Open-GithubQuery {
             Mandatory = $false,
             ParameterSetName = 'Web',
             HelpMessage = 'Opens the search results in Mozilla Firefox browser.'
-            )]
-            [Alias('ff')]
+        )]
+        [Alias('ff')]
         [switch] $Firefox,
         ########################################################################
         [Parameter(
             Mandatory = $false,
             ParameterSetName = 'Web',
             HelpMessage = ('Opens the search results in all registered modern ' +
-            'browsers.')
-            )]
+                'browsers.')
+        )]
         [switch] $All,
         ########################################################################
         [Parameter(
             Mandatory = $false,
             ParameterSetName = 'Web',
             HelpMessage = 'Opens the browser in fullscreen mode.'
-            )]
+        )]
         [Alias('fs', 'f')]
         [switch] $FullScreen,
         ########################################################################
@@ -567,44 +566,44 @@ function Open-GithubQuery {
             Mandatory = $false,
             ParameterSetName = 'Web',
             HelpMessage = 'Place browser window on the left side of the screen.'
-            )]
+        )]
         [switch] $Left,
         ########################################################################
         [Parameter(
             Mandatory = $false,
             ParameterSetName = 'Web',
             HelpMessage = ('Place browser window on the right side of the ' +
-            'screen.')
-            )]
+                'screen.')
+        )]
         [switch] $Right,
         ########################################################################
         [Parameter(
             Mandatory = $false,
             ParameterSetName = 'Web',
             HelpMessage = 'Place browser window on the top side of the screen.'
-            )]
+        )]
         [switch] $Top,
         ########################################################################
         [Parameter(
             Mandatory = $false,
             ParameterSetName = 'Web',
             HelpMessage = ('Place browser window on the bottom side of the ' +
-            'screen.')
-            )]
+                'screen.')
+        )]
         [switch] $Bottom,
         ########################################################################
         [Parameter(
             Mandatory = $false,
             ParameterSetName = 'Web',
             HelpMessage = 'Place browser window in the center of the screen.'
-            )]
+        )]
         [switch] $Centered,
         ########################################################################
         [Parameter(
             Mandatory = $false,
             ParameterSetName = 'Web',
             HelpMessage = 'Hide the browser controls.'
-            )]
+        )]
         [Alias('a', 'app', 'appmode')]
         [switch] $ApplicationMode,
         ########################################################################
@@ -612,7 +611,7 @@ function Open-GithubQuery {
             Mandatory = $false,
             ParameterSetName = 'Web',
             HelpMessage = 'Prevent loading of browser extensions.'
-            )]
+        )]
         [Alias('de', 'ne', 'NoExtensions')]
         [switch] $NoBrowserExtensions,
         ########################################################################
@@ -620,7 +619,7 @@ function Open-GithubQuery {
             Mandatory = $false,
             ParameterSetName = 'Web',
             HelpMessage = 'Disable the popup blocker in the browser.'
-            )]
+        )]
         [Alias('allowpopups')]
         [switch] $DisablePopupBlocker,
         ########################################################################
@@ -628,7 +627,7 @@ function Open-GithubQuery {
             Mandatory = $false,
             ParameterSetName = 'Web',
             HelpMessage = 'Focus the browser window after opening.'
-            )]
+        )]
         [Alias('fw', 'focus')]
         [switch] $FocusWindow,
         ########################################################################
@@ -636,8 +635,8 @@ function Open-GithubQuery {
             Mandatory = $false,
             ParameterSetName = 'Web',
             HelpMessage = ('Set the browser window to foreground after ' +
-            'opening.')
-            )]
+                'opening.')
+        )]
         [Alias('fg')]
         [switch] $SetForeground,
         ########################################################################
@@ -645,14 +644,14 @@ function Open-GithubQuery {
             Mandatory = $false,
             ParameterSetName = 'Web',
             HelpMessage = 'Maximize the window after positioning.'
-            )]
+        )]
         [switch] $Maximize,
         ########################################################################
         [Parameter(
             Mandatory = $false,
             ParameterSetName = 'Web',
             HelpMessage = 'Restore PowerShell window focus.'
-            )]
+        )]
         [Alias('rf', 'bg')]
         [switch] $RestoreFocus,
         ########################################################################
@@ -660,15 +659,15 @@ function Open-GithubQuery {
             Mandatory = $false,
             ParameterSetName = 'Web',
             HelpMessage = ("Don't re-use existing browser window, instead, " +
-            'create a new one.')
-            )]
+                'create a new one.')
+        )]
         [Alias('nw', 'new')]
         [switch] $NewWindow,
         ########################################################################
         [Parameter(
             Mandatory = $false,
             HelpMessage = ('Returns a [System.Diagnostics.Process] object of ' +
-            'the browserprocess in web mode or query object in API mode.')
+                'the browserprocess in web mode or query object in API mode.')
         )]
         [Alias('pt')]
         [switch] $PassThru,
@@ -677,21 +676,21 @@ function Open-GithubQuery {
             Mandatory = $false,
             ParameterSetName = 'Web',
             HelpMessage = "Don't open webbrowser, just return the url."
-            )]
+        )]
         [switch] $ReturnURL,
         ########################################################################
         [Parameter(
             Mandatory = $false,
             ParameterSetName = 'Web',
             HelpMessage = 'After opening webbrowser, return the url.'
-            )]
+        )]
         [switch] $ReturnOnlyURL,
         ########################################################################
         [Parameter(
             Mandatory = $false,
             ParameterSetName = 'Web',
             HelpMessage = 'Escape control characters when sending keys.'
-            )]
+        )]
         [Alias('Escape')]
         [switch] $SendKeyEscape,
         ########################################################################
@@ -699,7 +698,7 @@ function Open-GithubQuery {
             Mandatory = $false,
             ParameterSetName = 'Web',
             HelpMessage = ('Prevent returning keyboard focus to PowerShell ' +
-            'after sending keys.')
+                'after sending keys.')
         )]
         [Alias('HoldKeyboardFocus')]
         [switch] $SendKeyHoldKeyboardFocus,
@@ -708,8 +707,8 @@ function Open-GithubQuery {
             Mandatory = $false,
             ParameterSetName = 'Web',
             HelpMessage = ('Send Shift+Enter instead of regular Enter for ' +
-            'line breaks.')
-            )]
+                'line breaks.')
+        )]
         [Alias('UseShiftEnter')]
         [switch] $SendKeyUseShiftEnter,
         ########################################################################
@@ -717,8 +716,8 @@ function Open-GithubQuery {
             Mandatory = $false,
             ParameterSetName = 'Web',
             HelpMessage = ('Remove window borders and title bar for a cleaner ' +
-            'appearance.')
-            )]
+                'appearance.')
+        )]
         [Alias('nb')]
         [switch] $NoBorders,
         ########################################################################
@@ -726,8 +725,8 @@ function Open-GithubQuery {
             Mandatory = $false,
             ParameterSetName = 'Web',
             HelpMessage = ('Place browser window side by side with PowerShell ' +
-            'on the same monitor.')
-            )]
+                'on the same monitor.')
+        )]
         [Alias('sbs')]
         [switch] $SideBySide,
         ########################################################################
@@ -735,31 +734,30 @@ function Open-GithubQuery {
             Mandatory = $false,
             ParameterSetName = 'Web',
             HelpMessage = ('Use alternative settings stored in session for ' +
-            'preferences.')
-            )]
+                'preferences.')
+        )]
         [switch] $SessionOnly,
         ########################################################################
         [Parameter(
             Mandatory = $false,
             ParameterSetName = 'Web',
             HelpMessage = ('Clear alternative settings stored in session for ' +
-            'preferences.')
-            )]
+                'preferences.')
+        )]
         [switch] $ClearSession,
         ########################################################################
         [Parameter(
             Mandatory = $false,
             ParameterSetName = 'Web',
             HelpMessage = ('Store settings only in persistent preferences ' +
-            'without affecting session.')
-            )]
+                'without affecting session.')
+        )]
         [Alias('FromPreferences')]
         [switch] $SkipSession
         ########################################################################
     )
 
-    begin
-    {
+    begin {
         $invocationArguments = GenXdev.FileSystem\Copy-IdenticalParamValues `
             -BoundParameters $PSBoundParameters `
             -FunctionName 'GenXdev.Webbrowser\Open-Webbrowser' `
@@ -783,35 +781,35 @@ function Open-GithubQuery {
                 $AuthHeader['Authorization'] = "token $Token"
             }
             $Headers = $AuthHeader + @{
-                "Accept" = "application/vnd.github.v3+json"
+                "Accept"     = "application/vnd.github.v3+json"
                 "User-Agent" = "Open-GithubQuery-PS/1.0"
             }
 
             $ApiEndpoint = switch ($Type) {
                 'Repository' { "https://api.github.com/search/repositories" }
-                'Code'       { "https://api.github.com/search/code" }
-                'Issue'      { "https://api.github.com/search/issues" }
-                'PullRequest'{ "https://api.github.com/search/issues" }
-                'Commit'     { "https://api.github.com/search/commits" }
-                'User'       { "https://api.github.com/search/users" }
+                'Code' { "https://api.github.com/search/code" }
+                'Issue' { "https://api.github.com/search/issues" }
+                'PullRequest' { "https://api.github.com/search/issues" }
+                'Commit' { "https://api.github.com/search/commits" }
+                'User' { "https://api.github.com/search/users" }
                 'Discussion' { "https://api.github.com/search/discussions" }
-                'Topic'      { "https://api.github.com/search/topics" }
-                'Wiki'       { "https://api.github.com/search/wikis" }
-                default      { throw "Unsupported search type: $Type" }
+                'Topic' { "https://api.github.com/search/topics" }
+                'Wiki' { "https://api.github.com/search/wikis" }
+                default { throw "Unsupported search type: $Type" }
             }
         }
 
         $Qualifiers = @()
-        if ($User)     { $Qualifiers += "user:$User" }
-        if ($Org)      { $Qualifiers += "org:$Org" }
-        if ($Repo)     { $Qualifiers += "repo:$Repo" }
-        if ($In)       { foreach($f in $In) { $Qualifiers += "in:$f" } }
+        if ($User) { $Qualifiers += "user:$User" }
+        if ($Org) { $Qualifiers += "org:$Org" }
+        if ($Repo) { $Qualifiers += "repo:$Repo" }
+        if ($In) { foreach ($f in $In) { $Qualifiers += "in:$f" } }
         if ($Language) { $Qualifiers += "language:$Language" }
-        if ($Size)     { $Qualifiers += "size:$Size" }
-        if ($Path -and $Type -eq 'Code')      { $Qualifiers += "path:$Path" }
-        if ($Filename -and $Type -eq 'Code')  { $Qualifiers += "filename:$Filename" }
+        if ($Size) { $Qualifiers += "size:$Size" }
+        if ($Path -and $Type -eq 'Code') { $Qualifiers += "path:$Path" }
+        if ($Filename -and $Type -eq 'Code') { $Qualifiers += "filename:$Filename" }
         if ($Extension -and $Type -eq 'Code') { $Qualifiers += "extension:$Extension" }
-        if ($CaseSensitive.IsPresent)         { $Qualifiers += "case:yes" }
+        if ($CaseSensitive) { $Qualifiers += "case:yes" }
         if ($State -and ($Type -eq 'Issue' -or $Type -eq 'PullRequest')) {
             $Qualifiers += "state:$State"
         }
@@ -822,17 +820,16 @@ function Open-GithubQuery {
             $Qualifiers += "assignee:$Assignee"
         }
         if ($Labels -and ($Type -eq 'Issue' -or $Type -eq 'PullRequest')) {
-            foreach($label in $Labels) { $Qualifiers += "label:$label" }
+            foreach ($label in $Labels) { $Qualifiers += "label:$label" }
         }
         if ($No -and ($Type -eq 'Issue' -or $Type -eq 'PullRequest')) {
-            foreach($noq in $No) { $Qualifiers += "no:$noq" }
+            foreach ($noq in $No) { $Qualifiers += "no:$noq" }
         }
         if ($Type -eq 'PullRequest') { $Qualifiers += "is:pr" }
-        elseif ($Type -eq 'Issue')   { $Qualifiers += "is:issue" }
+        elseif ($Type -eq 'Issue') { $Qualifiers += "is:issue" }
     }
 
-    process
-    {
+    process {
         foreach ($q in $Query) {
 
             Microsoft.PowerShell.Utility\Write-Verbose "Processing Github search query: $q"
@@ -842,25 +839,26 @@ function Open-GithubQuery {
             if ($PSCmdlet.ParameterSetName -eq 'Api') {
 
                 $Uri = "$ApiEndpoint?q=$([Uri]::EscapeDataString($QueryString))&per_page=$PerPage&page=$Page"
-                if ($SortBy)  { $Uri += "&sort=$SortBy" }
-                if ($Order)   { $Uri += "&order=$Order" }
+                if ($SortBy) { $Uri += "&sort=$SortBy" }
+                if ($Order) { $Uri += "&order=$Order" }
 
                 if ($PSCmdlet.ShouldProcess("GitHub", "Run $Type search query")) {
                     try {
                         Microsoft.PowerShell.Utility\Write-Progress -Activity $ProgressActivity -Status "Calling GitHub REST API" -PercentComplete 10
 
-                        $Result = if ($AsJob.IsPresent) {
+                        $Result = if ($AsJob) {
                             Microsoft.PowerShell.Core\Start-Job -ScriptBlock {
                                 param($Uri, $Headers)
                                 Microsoft.PowerShell.Utility\Invoke-RestMethod -Uri $Uri -Headers $Headers -Method Get
                             } -ArgumentList $Uri, $Headers | Microsoft.PowerShell.Core\Wait-Job | Microsoft.PowerShell.Core\Receive-Job
-                        } else {
+                        }
+                        else {
                             Microsoft.PowerShell.Utility\Invoke-RestMethod -Uri $Uri -Headers $Headers -Method Get
                         }
 
                         Microsoft.PowerShell.Utility\Write-Progress -Activity $ProgressActivity -Completed
 
-                        if ($RawResponse.IsPresent) {
+                        if ($RawResponse) {
                             Microsoft.PowerShell.Utility\Write-Output $Result
                             return
                         }
@@ -887,71 +885,72 @@ function Open-GithubQuery {
                                     }
                                     'Code' {
                                         [PSCustomObject]@{
-                                            Name        = $item.name
-                                            Path        = $item.path
-                                            Repository  = $item.repository.full_name
-                                            RepoUrl     = $item.repository.html_url
-                                            HtmlUrl     = $item.html_url
-                                            Language    = $item.language
-                                            Score       = $item.score
-                                            Lines       = $item.line_numbers
-                                            Sha         = $item.sha
+                                            Name       = $item.name
+                                            Path       = $item.path
+                                            Repository = $item.repository.full_name
+                                            RepoUrl    = $item.repository.html_url
+                                            HtmlUrl    = $item.html_url
+                                            Language   = $item.language
+                                            Score      = $item.score
+                                            Lines      = $item.line_numbers
+                                            Sha        = $item.sha
                                         }
                                     }
-                                    'Issue'{
+                                    'Issue' {
                                         [PSCustomObject]@{
-                                            Number      = $item.number
-                                            Title       = $item.title
-                                            Url         = $item.html_url
-                                            State       = $item.state
-                                            Author      = $item.user.login
-                                            Labels      = $item.labels
-                                            Comments    = $item.comments
-                                            Created     = $item.created_at
-                                            Updated     = $item.updated_at
-                                            Closed      = $item.closed_at
-                                            Body        = $item.body
+                                            Number   = $item.number
+                                            Title    = $item.title
+                                            Url      = $item.html_url
+                                            State    = $item.state
+                                            Author   = $item.user.login
+                                            Labels   = $item.labels
+                                            Comments = $item.comments
+                                            Created  = $item.created_at
+                                            Updated  = $item.updated_at
+                                            Closed   = $item.closed_at
+                                            Body     = $item.body
                                         }
                                     }
 
                                     'PullRequest' {
                                         [PSCustomObject]@{
-                                            Number      = $item.number
-                                            Title       = $item.title
-                                            Url         = $item.html_url
-                                            State       = $item.state
-                                            Author      = $item.user.login
-                                            Labels      = $item.labels
-                                            Comments    = $item.comments
-                                            Created     = $item.created_at
-                                            Updated     = $item.updated_at
-                                            Closed      = $item.closed_at
-                                            Body        = $item.body
+                                            Number   = $item.number
+                                            Title    = $item.title
+                                            Url      = $item.html_url
+                                            State    = $item.state
+                                            Author   = $item.user.login
+                                            Labels   = $item.labels
+                                            Comments = $item.comments
+                                            Created  = $item.created_at
+                                            Updated  = $item.updated_at
+                                            Closed   = $item.closed_at
+                                            Body     = $item.body
                                         }
                                     }
                                     'User' {
                                         [PSCustomObject]@{
-                                            UserName    = $item.login
-                                            Type        = $item.type
-                                            Url         = $item.html_url
-                                            Avatar      = $item.avatar_url
-                                            Score       = $item.score
+                                            UserName = $item.login
+                                            Type     = $item.type
+                                            Url      = $item.html_url
+                                            Avatar   = $item.avatar_url
+                                            Score    = $item.score
                                         }
                                     }
                                     default { Microsoft.PowerShell.Utility\Write-Output $item }
                                 }
                             }
-                        } else {
+                        }
+                        else {
                             Microsoft.PowerShell.Utility\Write-Warning "No results returned from GitHub API. Check parameters."
                         }
 
-                        if ($PassThru.IsPresent) {
+                        if ($PassThru) {
                             Microsoft.PowerShell.Utility\Write-Output ([PSCustomObject]@{
-                                Query      = $q
-                                Type       = $Type
-                                Parameters = $PSBoundParameters
-                                RawUri     = $Uri
-                            })
+                                    Query      = $q
+                                    Type       = $Type
+                                    Parameters = $PSBoundParameters
+                                    RawUri     = $Uri
+                                })
                         }
                     }
                     catch {
@@ -962,32 +961,34 @@ function Open-GithubQuery {
                                 $LimitReset = $_.Exception.Response.Headers["X-RateLimit-Reset"]
                                 if ($null -ne $RateLimit) {
                                     Microsoft.PowerShell.Utility\Write-Warning ("GitHub API rate limit remaining: $RateLimit. " +
-                                           "Resets at: $([DateTimeOffset]::FromUnixTimeSeconds([int]$LimitReset))")
+                                        "Resets at: $([DateTimeOffset]::FromUnixTimeSeconds([int]$LimitReset))")
                                 }
-                            } catch {
+                            }
+                            catch {
 
                             }
                         }
                     }
                 }
-            } else {
+            }
+            else {
 
                 $webType = switch ($Type) {
                     'Repository' { 'repositories' }
-                    'Code'       { 'code' }
-                    'Issue'      { 'issues' }
-                    'PullRequest'{ 'issues' }
-                    'Commit'     { 'commits' }
-                    'User'       { 'users' }
+                    'Code' { 'code' }
+                    'Issue' { 'issues' }
+                    'PullRequest' { 'issues' }
+                    'Commit' { 'commits' }
+                    'User' { 'users' }
                     'Discussion' { 'discussions' }
-                    'Topic'      { 'topics' }
-                    'Wiki'       { 'wikis' }
-                    default      { 'repositories' }
+                    'Topic' { 'topics' }
+                    'Wiki' { 'wikis' }
+                    default { 'repositories' }
                 }
 
                 $webUrl = "https://github.com/search?q=$([Uri]::EscapeDataString($QueryString))&type=$webType"
-                if ($SortBy)  { $webUrl += "&s=$SortBy" }
-                if ($Order)   { $webUrl += "&o=$Order" }
+                if ($SortBy) { $webUrl += "&s=$SortBy" }
+                if ($Order) { $webUrl += "&o=$Order" }
                 if ($PerPage -ne 10) { $webUrl += "&per_page=$PerPage" }
                 if ($Page -ne 1) { $webUrl += "&p=$Page" }
 

@@ -11,10 +11,6 @@ if ($major -ne 10) {
 
 
 
-. "$PSScriptRoot\Functions\GenXdev.Queries.Webbrowser\Clear-YoutubeWatched.ps1"
-. "$PSScriptRoot\Functions\GenXdev.Queries.Webbrowser\Copy-PDFsFromGoogleQuery.ps1"
-. "$PSScriptRoot\Functions\GenXdev.Queries.Webbrowser\Get-GoogleSearchResultUrls.ps1"
-. "$PSScriptRoot\Functions\GenXdev.Queries.Webbrowser\Open-AllGoogleLinks.ps1"
 . "$PSScriptRoot\Functions\GenXdev.Queries.Webbrowser\Open-AllYoutubeVideos.ps1"
 . "$PSScriptRoot\Functions\GenXdev.Queries.Webbrowser\Open-BingQuery.ps1"
 . "$PSScriptRoot\Functions\GenXdev.Queries.Webbrowser\Open-BuiltWithSiteInfo.ps1"

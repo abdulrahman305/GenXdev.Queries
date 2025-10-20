@@ -1,0 +1,1756 @@
+<?xml version="1.0" encoding="utf-8"?>
+<helpItems schema="maml" xmlns="http://msh">
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <maml:name>-</maml:name>
+      <command:verb></command:verb>
+      <command:noun></command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>Continuously executes JavaScript in a browser tab and processes results through
+an optional callback. The script runs in a separate thread to prevent blocking.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <command:name></command:name>
+        <command:parameter required="false" position="1">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="2">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="3">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter>
+        <maml:name></maml:name>
+        <maml:description>
+          <maml:para>JavaScript code, URLs, or file paths to execute in the browser tab.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>true (ByValue, ByPropertyName)</dev:pipelineInput>
+        <dev:position>1</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+      <command:parameter>
+        <maml:name></maml:name>
+        <maml:description>
+          <maml:para>Optional URL to navigate to before starting the polling process.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>false</dev:pipelineInput>
+        <dev:position>2</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+      <command:parameter>
+        <maml:name></maml:name>
+        <maml:description>
+          <maml:para>Optional scriptblock that processes results after each poll iteration.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>false</dev:pipelineInput>
+        <dev:position>3</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+    </command:parameters>
+    <maml:alertSet>
+      <maml:alert><maml:para>Requires Windows 10 or later.</maml:para></maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title></maml:title>
+        <dev:code></dev:code>
+        <dev:remarks>
+          <maml:para></maml:para>
+          <maml:para></maml:para>
+          <maml:para></maml:para>
+          <maml:para></maml:para>
+          <maml:para></maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <maml:name>-</maml:name>
+      <command:verb></command:verb>
+      <command:noun></command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>Executes all cmdlets that handle webpage queries, processing both URLs and search
+terms. For URLs, it performs site-specific queries, and for search terms it
+executes general web queries. This function dynamically discovers and executes
+all available query cmdlets from the GenXdev.Queries module family.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <command:name></command:name>
+        <command:parameter required="true" position="1">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="3">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name></maml:name>
+          <command:parameterValue></command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter>
+        <maml:name></maml:name>
+        <maml:description>
+          <maml:para>The search terms or URLs to query. Can be provided as strings or URLs.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>true (ByValue, ByPropertyName)</dev:pipelineInput>
+        <dev:position>1</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+      <command:parameter>
+        <maml:name></maml:name>
+        <maml:description>
+          <maml:para>The language of the returned search results.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>false</dev:pipelineInput>
+        <dev:position>3</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+      <command:parameter>
+        <maml:name></maml:name>
+        <maml:description>
+          <maml:para>Opens in incognito/private browsing mode.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>false</dev:pipelineInput>
+        <dev:position>named</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+      <command:parameter>
+        <maml:name></maml:name>
+        <maml:description>
+          <maml:para>Force enable debugging port, stopping existing browsers if needed.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>false</dev:pipelineInput>
+        <dev:position>named</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+      <command:parameter>
+        <maml:name></maml:name>
+        <maml:description>
+          <maml:para>Opens in Microsoft Edge.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>false</dev:pipelineInput>
+        <dev:position>named</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+      <command:parameter>
+        <maml:name></maml:name>
+        <maml:description>
+          <maml:para>Opens in Google Chrome.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>false</dev:pipelineInput>
+        <dev:position>named</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+      <command:parameter>
+        <maml:name></maml:name>
+        <maml:description>
+          <maml:para>Opens in Microsoft Edge or Google Chrome, depending on what the default
+browser is.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>false</dev:pipelineInput>
+        <dev:position>named</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+      <command:parameter>
+        <maml:name></maml:name>
+        <maml:description>
+          <maml:para>Opens in Firefox.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>false</dev:pipelineInput>
+        <dev:position>named</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+      <command:parameter>
+        <maml:name></maml:name>
+        <maml:description>
+          <maml:para>Opens in all registered modern browsers.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>false</dev:pipelineInput>
+        <dev:position>named</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+      <command:parameter>
+        <maml:name></maml:name>
+        <maml:description>
+          <maml:para>The monitor to use, 0 = default, -1 is discard, -2 = Configured secondary
+monitor, defaults to -1, no positioning.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>false</dev:pipelineInput>
+        <dev:position>named</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+      <command:parameter>
+        <maml:name></maml:name>
+        <command:parameterValue required="false"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>false</dev:pipelineInput>
+        <dev:position>named</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+      <command:parameter>
+        <maml:name></maml:name>
+        <maml:description>
+          <maml:para>The initial width of the webbrowser window.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>false</dev:pipelineInput>
+        <dev:position>named</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+      <command:parameter>
+        <maml:name></maml:name>
+        <maml:description>
+          <maml:para>The initial height of the webbrowser window.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>false</dev:pipelineInput>
+        <dev:position>named</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+      <command:parameter>
+        <maml:name></maml:name>
+        <maml:description>
+          <maml:para>The initial X position of the webbrowser window.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>false</dev:pipelineInput>
+        <dev:position>named</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+      <command:parameter>
+        <maml:name></maml:name>
+        <maml:description>
+          <maml:para>The initial Y position of the webbrowser window.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>false</dev:pipelineInput>
+        <dev:position>named</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+      <command:parameter>
+        <maml:name></maml:name>
+        <maml:description>
+          <maml:para>Place browser window on the left side of the screen.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>false</dev:pipelineInput>
+        <dev:position>named</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+      <command:parameter>
+        <maml:name></maml:name>
+        <maml:description>
+          <maml:para>Place browser window on the right side of the screen.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>false</dev:pipelineInput>
+        <dev:position>named</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+      <command:parameter>
+        <maml:name></maml:name>
+        <maml:description>
+          <maml:para>Place browser window on the top side of the screen.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>false</dev:pipelineInput>
+        <dev:position>named</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+      <command:parameter>
+        <maml:name></maml:name>
+        <maml:description>
+          <maml:para>Place browser window on the bottom side of the screen.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>false</dev:pipelineInput>
+        <dev:position>named</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+      <command:parameter>
+        <maml:name></maml:name>
+        <maml:description>
+          <maml:para>Place browser window in the center of the screen.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>false</dev:pipelineInput>
+        <dev:position>named</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+      <command:parameter>
+        <maml:name></maml:name>
+        <maml:description>
+          <maml:para>Hide the browser controls.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>false</dev:pipelineInput>
+        <dev:position>named</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+      <command:parameter>
+        <maml:name></maml:name>
+        <maml:description>
+          <maml:para>Prevent loading of browser extensions.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>false</dev:pipelineInput>
+        <dev:position>named</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+      <command:parameter>
+        <maml:name></maml:name>
+        <maml:description>
+          <maml:para>Disable the popup blocker.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>false</dev:pipelineInput>
+        <dev:position>named</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+      <command:parameter>
+        <maml:name></maml:name>
+        <maml:description>
+          <maml:para>Set the browser accept-lang http header.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>false</dev:pipelineInput>
+        <dev:position>named</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+      <command:parameter>
+        <maml:name></maml:name>
+        <maml:description>
+          <maml:para>Keystrokes to send to the Browser window, see documentation for cmdlet
+GenXdev.Windows\Send-Key.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>false</dev:pipelineInput>
+        <dev:position>named</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+      <command:parameter>
+        <maml:name></maml:name>
+        <maml:description>
+          <maml:para>Focus the browser window after opening.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>false</dev:pipelineInput>
+        <dev:position>named</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+      <command:parameter>
+        <maml:name></maml:name>
+        <maml:description>
+          <maml:para>Set the browser window to foreground after opening.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>false</dev:pipelineInput>
+        <dev:position>named</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+      <command:parameter>
+        <maml:name></maml:name>
+        <maml:description>
+          <maml:para>Maximize the window after positioning</maml:para>
+        </maml:description>
+        <command:parameterValue required="false"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>false</dev:pipelineInput>
+        <dev:position>named</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+      <command:parameter>
+        <maml:name></maml:name>
+        <maml:description>
+          <maml:para>Restore the window to normal state after positioning</maml:para>
+        </maml:description>
+        <command:parameterValue required="false"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>false</dev:pipelineInput>
+        <dev:position>named</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+      <command:parameter>
+        <maml:name></maml:name>
+        <maml:description>
+          <maml:para>Restore PowerShell window focus.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>false</dev:pipelineInput>
+        <dev:position>named</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+      <command:parameter>
+        <maml:name></maml:name>
+        <maml:description>
+          <maml:para>Don&apos;t re-use existing browser window, instead, create a new one.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>false</dev:pipelineInput>
+        <dev:position>named</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+      <command:parameter>
+        <maml:name></maml:name>
+        <maml:description>
+          <maml:para>Returns a [System.Diagnostics.Process] object of the browserprocess.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>false</dev:pipelineInput>
+        <dev:position>named</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+      <command:parameter>
+        <maml:name></maml:name>
+        <maml:description>
+          <maml:para>Don&apos;t open webbrowser, just return the url.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>false</dev:pipelineInput>
+        <dev:position>named</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+      <command:parameter>
+        <maml:name></maml:name>
+        <maml:description>
+          <maml:para>After opening webbrowser, return the url.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>false</dev:pipelineInput>
+        <dev:position>named</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+      <command:parameter>
+        <maml:name></maml:name>
+        <maml:description>
+          <maml:para>Escape control characters when sending keys.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>false</dev:pipelineInput>
+        <dev:position>named</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+      <command:parameter>
+        <maml:name></maml:name>
+        <maml:description>
+          <maml:para>Prevent returning keyboard focus to PowerShell after sending keys.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>false</dev:pipelineInput>
+        <dev:position>named</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+      <command:parameter>
+        <maml:name></maml:name>
+        <maml:description>
+          <maml:para>Send Shift+Enter instead of regular Enter for line breaks.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>false</dev:pipelineInput>
+        <dev:position>named</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+      <command:parameter>
+        <maml:name></maml:name>
+        <maml:description>
+          <maml:para>Delay between sending different key sequences in milliseconds.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>false</dev:pipelineInput>
+        <dev:position>named</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+      <command:parameter>
+        <maml:name></maml:name>
+        <command:parameterValue required="false"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>false</dev:pipelineInput>
+        <dev:position>named</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+      <command:parameter>
+        <maml:name></maml:name>
+        <command:parameterValue required="false"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>false</dev:pipelineInput>
+        <dev:position>named</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+      <command:parameter>
+        <maml:name></maml:name>
+        <command:parameterValue required="false"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>false</dev:pipelineInput>
+        <dev:position>named</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+      <command:parameter>
+        <maml:name></maml:name>
+        <command:parameterValue required="false"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>false</dev:pipelineInput>
+        <dev:position>named</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+      <command:parameter>
+        <maml:name></maml:name>
+        <command:parameterValue required="false"></command:parameterValue>
+        <dev:defaultValue></dev:defaultValue>
+        <dev:variableLength>false</dev:variableLength>
+        <dev:globbing>false</dev:globbing>
+        <dev:pipelineInput>false</dev:pipelineInput>
+        <dev:position>named</dev:position>
+        <dev:aliases></dev:aliases>
+      </command:parameter>
+    </command:parameters>
+    <command:examples>
+      <command:example>
+        <maml:title></maml:title>
+        <dev:code></dev:code>
+        <dev:remarks>
+          <maml:para>Opens all possible query types for &quot;powershell scripting&quot; on the default monitor.</maml:para>
+          <maml:para></maml:para>
+          <maml:para></maml:para>
+          <maml:para></maml:para>
+          <maml:para></maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title></maml:title>
+        <dev:code></dev:code>
+        <dev:remarks>
+          <maml:para>Opens all possible query types for the GitHub URL using alias and short parameters.</maml:para>
+          <maml:para></maml:para>
+          <maml:para></maml:para>
+          <maml:para></maml:para>
+          <maml:para></maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <maml:name>-</maml:name>
+      <command:verb></command:verb>
+      <command:noun></command:noun>
+    </command:details>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String[]
+</maml:name>
+        </dev:type>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <maml:name>-</maml:name>
+      <command:verb></command:verb>
+      <command:noun></command:noun>
+    </command:details>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String[]
+</maml:name>
+        </dev:type>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <maml:name>-</maml:name>
+      <command:verb></command:verb>
+      <command:noun></command:noun>
+    </command:details>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String[]
+</maml:name>
+        </dev:type>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <maml:name>-</maml:name>
+      <command:verb></command:verb>
+      <command:noun></command:noun>
+    </command:details>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String[]
+</maml:name>
+        </dev:type>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <maml:name>-</maml:name>
+      <command:verb></command:verb>
+      <command:noun></command:noun>
+    </command:details>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String[]
+</maml:name>
+        </dev:type>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <maml:name>-</maml:name>
+      <command:verb></command:verb>
+      <command:noun></command:noun>
+    </command:details>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String[]
+</maml:name>
+        </dev:type>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <maml:name>-</maml:name>
+      <command:verb></command:verb>
+      <command:noun></command:noun>
+    </command:details>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String[]
+</maml:name>
+        </dev:type>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <maml:name>-</maml:name>
+      <command:verb></command:verb>
+      <command:noun></command:noun>
+    </command:details>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String[]
+</maml:name>
+        </dev:type>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <maml:name>-</maml:name>
+      <command:verb></command:verb>
+      <command:noun></command:noun>
+    </command:details>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String[]
+</maml:name>
+        </dev:type>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <maml:name>-</maml:name>
+      <command:verb></command:verb>
+      <command:noun></command:noun>
+    </command:details>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String[]
+</maml:name>
+        </dev:type>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <maml:name>-</maml:name>
+      <command:verb></command:verb>
+      <command:noun></command:noun>
+    </command:details>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String[]
+</maml:name>
+        </dev:type>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Management.Automation.PSObject
+</maml:name>
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <maml:name>-</maml:name>
+      <command:verb></command:verb>
+      <command:noun></command:noun>
+    </command:details>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String[]
+</maml:name>
+        </dev:type>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <maml:name>-</maml:name>
+      <command:verb></command:verb>
+      <command:noun></command:noun>
+    </command:details>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String[]
+</maml:name>
+        </dev:type>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <maml:name>-</maml:name>
+      <command:verb></command:verb>
+      <command:noun></command:noun>
+    </command:details>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String[]
+</maml:name>
+        </dev:type>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <maml:name>-</maml:name>
+      <command:verb></command:verb>
+      <command:noun></command:noun>
+    </command:details>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String[]
+</maml:name>
+        </dev:type>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <maml:name>-</maml:name>
+      <command:verb></command:verb>
+      <command:noun></command:noun>
+    </command:details>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String[]
+</maml:name>
+        </dev:type>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <maml:name>-</maml:name>
+      <command:verb></command:verb>
+      <command:noun></command:noun>
+    </command:details>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String[]
+</maml:name>
+        </dev:type>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <maml:name>-</maml:name>
+      <command:verb></command:verb>
+      <command:noun></command:noun>
+    </command:details>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String[]
+</maml:name>
+        </dev:type>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <maml:name>-</maml:name>
+      <command:verb></command:verb>
+      <command:noun></command:noun>
+    </command:details>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String[]
+</maml:name>
+        </dev:type>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <maml:name>-</maml:name>
+      <command:verb></command:verb>
+      <command:noun></command:noun>
+    </command:details>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String[]
+</maml:name>
+        </dev:type>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <maml:name>-</maml:name>
+      <command:verb></command:verb>
+      <command:noun></command:noun>
+    </command:details>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String
+System.String[]
+</maml:name>
+        </dev:type>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <maml:name>-</maml:name>
+      <command:verb></command:verb>
+      <command:noun></command:noun>
+    </command:details>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String[]
+</maml:name>
+        </dev:type>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <maml:name>-</maml:name>
+      <command:verb></command:verb>
+      <command:noun></command:noun>
+    </command:details>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String[]
+</maml:name>
+        </dev:type>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <maml:name>-</maml:name>
+      <command:verb></command:verb>
+      <command:noun></command:noun>
+    </command:details>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String[]
+</maml:name>
+        </dev:type>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <maml:name>-</maml:name>
+      <command:verb></command:verb>
+      <command:noun></command:noun>
+    </command:details>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String[]
+</maml:name>
+        </dev:type>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <maml:name>-</maml:name>
+      <command:verb></command:verb>
+      <command:noun></command:noun>
+    </command:details>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String[]
+</maml:name>
+        </dev:type>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <maml:name>-</maml:name>
+      <command:verb></command:verb>
+      <command:noun></command:noun>
+    </command:details>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None
+</maml:name>
+        </dev:type>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <maml:name>-</maml:name>
+      <command:verb></command:verb>
+      <command:noun></command:noun>
+    </command:details>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None
+</maml:name>
+        </dev:type>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <maml:name>-</maml:name>
+      <command:verb></command:verb>
+      <command:noun></command:noun>
+    </command:details>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None
+</maml:name>
+        </dev:type>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <maml:name>-</maml:name>
+      <command:verb></command:verb>
+      <command:noun></command:noun>
+    </command:details>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None
+</maml:name>
+        </dev:type>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <maml:name>-</maml:name>
+      <command:verb></command:verb>
+      <command:noun></command:noun>
+    </command:details>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None
+</maml:name>
+        </dev:type>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <maml:name>-</maml:name>
+      <command:verb></command:verb>
+      <command:noun></command:noun>
+    </command:details>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None
+</maml:name>
+        </dev:type>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <maml:name>ConvertTo-Uris</maml:name>
+      <command:verb>ConvertTo</command:verb>
+      <command:noun>Uris</command:noun>
+    </command:details>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String[]
+</maml:name>
+        </dev:type>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Uri
+</maml:name>
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <maml:name>Get-NextAffirmation</maml:name>
+      <command:verb>Get</command:verb>
+      <command:noun>NextAffirmation</command:noun>
+    </command:details>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None
+</maml:name>
+        </dev:type>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.String
+</maml:name>
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <maml:name>Get-WikipediaSummary</maml:name>
+      <command:verb>Get</command:verb>
+      <command:noun>WikipediaSummary</command:noun>
+    </command:details>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String[]
+</maml:name>
+        </dev:type>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.String
+</maml:name>
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <maml:name>Clear-YoutubeWatched</maml:name>
+      <command:verb>Clear</command:verb>
+      <command:noun>YoutubeWatched</command:noun>
+    </command:details>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>None
+</maml:name>
+        </dev:type>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Void
+</maml:name>
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <maml:name>Copy-PDFsFromGoogleQuery</maml:name>
+      <command:verb>Copy</command:verb>
+      <command:noun>PDFsFromGoogleQuery</command:noun>
+    </command:details>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String[]
+</maml:name>
+        </dev:type>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.IO.FileInfo
+</maml:name>
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <maml:name>Get-GoogleSearchResultUrls</maml:name>
+      <command:verb>Get</command:verb>
+      <command:noun>GoogleSearchResultUrls</command:noun>
+    </command:details>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String[]
+</maml:name>
+        </dev:type>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.String
+</maml:name>
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:relatedLinks />
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <maml:name>Open-AllGoogleLinks</maml:name>
+      <command:verb>Open</command:verb>
+      <command:noun>AllGoogleLinks</command:noun>
+    </command:details>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String[]
+</maml:name>
+        </dev:type>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Void
+</maml:name>
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:relatedLinks />
+  </command:command>
+</helpItems>
