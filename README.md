@@ -17912,18 +17912,32 @@ Open-YabAIBattle [[-Language] {Afrikaans | Akan | Albanian |
    ConvertTo-Uris  
 ``` 
 
-### SYNOPSIS 
-
 ### SYNTAX 
 ```PowerShell 
- 
+ConvertTo-Uris [[-Text] <string[]>] [<CommonParameters>] 
 ``` 
-
-### DESCRIPTION 
 
 ### PARAMETERS 
 ```yaml 
  
+``` 
+```yaml 
+    -Text <string[]>  
+        Text input that may contain URIs  
+        Required?                    false  
+        Position?                    0  
+        Accept pipeline input?       true (ByValue)  
+        Parameter set name           (All)  
+        Aliases                      None  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    <CommonParameters>  
+        This cmdlet supports the common parameters: Verbose, Debug,  
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,  
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see  
+        about_CommonParameters     (https://go.microsoft.com/fwlink/?LinkID=113216).   
 ``` 
 
 <br/><hr/><br/>
@@ -17938,18 +17952,32 @@ Open-YabAIBattle [[-Language] {Afrikaans | Akan | Albanian |
    Get-NextAffirmation                  --> WhatAboutIt  
 ``` 
 
-### SYNOPSIS 
-
 ### SYNTAX 
 ```PowerShell 
- 
+Get-NextAffirmation [[-Speak]] [<CommonParameters>] 
 ``` 
-
-### DESCRIPTION 
 
 ### PARAMETERS 
 ```yaml 
  
+``` 
+```yaml 
+    -Speak  
+        Use text-to-speech to speak the affirmation  
+        Required?                    false  
+        Position?                    0  
+        Accept pipeline input?       false  
+        Parameter set name           (All)  
+        Aliases                      None  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    <CommonParameters>  
+        This cmdlet supports the common parameters: Verbose, Debug,  
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,  
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see  
+        about_CommonParameters     (https://go.microsoft.com/fwlink/?LinkID=113216).   
 ``` 
 
 <br/><hr/><br/>
@@ -17961,18 +17989,33 @@ Open-YabAIBattle [[-Language] {Afrikaans | Akan | Albanian |
    Get-WikipediaSummary                 --> wikitxt  
 ``` 
 
-### SYNOPSIS 
-
 ### SYNTAX 
 ```PowerShell 
- 
+Get-WikipediaSummary [-Queries] <string[]>
+    [<CommonParameters>] 
 ``` 
-
-### DESCRIPTION 
 
 ### PARAMETERS 
 ```yaml 
  
+``` 
+```yaml 
+    -Queries <string[]>  
+        The query to perform  
+        Required?                    true  
+        Position?                    0  
+        Accept pipeline input?       true (ByValue, ByPropertyName)  
+        Parameter set name           (All)  
+        Aliases                      q, Name, Text, Query  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    <CommonParameters>  
+        This cmdlet supports the common parameters: Verbose, Debug,  
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,  
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see  
+        about_CommonParameters     (https://go.microsoft.com/fwlink/?LinkID=113216).   
 ``` 
 
 <br/><hr/><br/>
@@ -17987,18 +18030,21 @@ Open-YabAIBattle [[-Language] {Afrikaans | Akan | Albanian |
    Clear-YoutubeWatched  
 ``` 
 
-### SYNOPSIS 
-
 ### SYNTAX 
 ```PowerShell 
- 
+Clear-YoutubeWatched [<CommonParameters>] 
 ``` 
-
-### DESCRIPTION 
 
 ### PARAMETERS 
 ```yaml 
  
+``` 
+```yaml 
+    <CommonParameters>  
+        This cmdlet supports the common parameters: Verbose, Debug,  
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,  
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see  
+        about_CommonParameters     (https://go.microsoft.com/fwlink/?LinkID=113216).   
 ``` 
 
 <br/><hr/><br/>
@@ -18010,18 +18056,86 @@ Open-YabAIBattle [[-Language] {Afrikaans | Akan | Albanian |
    Copy-PDFsFromGoogleQuery  
 ``` 
 
-### SYNOPSIS 
-
 ### SYNTAX 
 ```PowerShell 
- 
+Copy-PDFsFromGoogleQuery [-Queries] <string[]> [[-Max]
+    <int>] [[-Language] {Afrikaans | Akan | Albanian |
+    Amharic | Arabic | Armenian | Azerbaijani | Basque |
+    Belarusian | Bemba | Bengali | Bihari | Bork, bork,
+    bork! | Bosnian | Breton | Bulgarian | Cambodian |
+    Catalan | Cherokee | Chichewa | Chinese (Simplified) |
+    Chinese (Traditional) | Corsican | Croatian | Czech |
+    Danish | Dutch | Elmer Fudd | English | Esperanto |
+    Estonian | Ewe | Faroese | Filipino | Finnish | French |
+    Frisian | Ga | Galician | Georgian | German | Greek |
+    Guarani | Gujarati | Hacker | Haitian Creole | Hausa |
+    Hawaiian | Hebrew | Hindi | Hungarian | Icelandic | Igbo
+    | Indonesian | Interlingua | Irish | Italian | Japanese
+    | Javanese | Kannada | Kazakh | Kinyarwanda | Kirundi |
+    Klingon | Kongo | Korean | Krio (Sierra Leone) | Kurdish
+    | Kurdish (Soranî) | Kyrgyz | Laothian | Latin | Latvian
+    | Lingala | Lithuanian | Lozi | Luganda | Luo |
+    Macedonian | Malagasy | Malay | Malayalam | Maltese |
+    Maori | Marathi | Mauritian Creole | Moldavian |
+    Mongolian | Montenegrin | Nepali | Nigerian Pidgin |
+    Northern Sotho | Norwegian | Norwegian (Nynorsk) |
+    Occitan | Oriya | Oromo | Pashto | Persian | Pirate |
+    Polish | Portuguese (Brazil) | Portuguese (Portugal) |
+    Punjabi | Quechua | Romanian | Romansh | Runyakitara |
+    Russian | Scots Gaelic | Serbian | Serbo-Croatian |
+    Sesotho | Setswana | Seychellois Creole | Shona | Sindhi
+    | Sinhalese | Slovak | Slovenian | Somali | Spanish |
+    Spanish (Latin American) | Sundanese | Swahili | Swedish
+    | Tajik | Tamil | Tatar | Telugu | Thai | Tigrinya |
+    Tonga | Tshiluba | Tumbuka | Turkish | Turkmen | Twi |
+    Uighur | Ukrainian | Urdu | Uzbek | Vietnamese | Welsh |
+    Wolof | Xhosa | Yiddish | Yoruba | Zulu}]
+    [<CommonParameters>] 
 ``` 
-
-### DESCRIPTION 
 
 ### PARAMETERS 
 ```yaml 
  
+``` 
+```yaml 
+    -Language <string>  
+        Optional language filter for search results  
+        Required?                    false  
+        Position?                    2  
+        Accept pipeline input?       false  
+        Parameter set name           (All)  
+        Aliases                      None  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    -Max <int>  
+        Maximum number of results to retrieve (default: 200)  
+        Required?                    false  
+        Position?                    1  
+        Accept pipeline input?       false  
+        Parameter set name           (All)  
+        Aliases                      None  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    -Queries <string[]>  
+        The search terms to query Google for PDF files  
+        Required?                    true  
+        Position?                    0  
+        Accept pipeline input?       true (ByValue, ByPropertyName)  
+        Parameter set name           (All)  
+        Aliases                      q, Name, Text, Query  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    <CommonParameters>  
+        This cmdlet supports the common parameters: Verbose, Debug,  
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,  
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see  
+        about_CommonParameters     (https://go.microsoft.com/fwlink/?LinkID=113216).   
 ``` 
 
 <br/><hr/><br/>
@@ -18033,18 +18147,85 @@ Open-YabAIBattle [[-Language] {Afrikaans | Akan | Albanian |
    Get-GoogleSearchResultUrls           --> qlinksget  
 ``` 
 
-### SYNOPSIS 
-
 ### SYNTAX 
 ```PowerShell 
- 
+Get-GoogleSearchResultUrls [-Queries] <string[]> [-Max
+    <int>] [-Language {Afrikaans | Akan | Albanian | Amharic
+    | Arabic | Armenian | Azerbaijani | Basque | Belarusian
+    | Bemba | Bengali | Bihari | Bork, bork, bork! | Bosnian
+    | Breton | Bulgarian | Cambodian | Catalan | Cherokee |
+    Chichewa | Chinese (Simplified) | Chinese (Traditional)
+    | Corsican | Croatian | Czech | Danish | Dutch | Elmer
+    Fudd | English | Esperanto | Estonian | Ewe | Faroese |
+    Filipino | Finnish | French | Frisian | Ga | Galician |
+    Georgian | German | Greek | Guarani | Gujarati | Hacker
+    | Haitian Creole | Hausa | Hawaiian | Hebrew | Hindi |
+    Hungarian | Icelandic | Igbo | Indonesian | Interlingua
+    | Irish | Italian | Japanese | Javanese | Kannada |
+    Kazakh | Kinyarwanda | Kirundi | Klingon | Kongo |
+    Korean | Krio (Sierra Leone) | Kurdish | Kurdish
+    (Soranî) | Kyrgyz | Laothian | Latin | Latvian | Lingala
+    | Lithuanian | Lozi | Luganda | Luo | Macedonian |
+    Malagasy | Malay | Malayalam | Maltese | Maori | Marathi
+    | Mauritian Creole | Moldavian | Mongolian | Montenegrin
+    | Nepali | Nigerian Pidgin | Northern Sotho | Norwegian
+    | Norwegian (Nynorsk) | Occitan | Oriya | Oromo | Pashto
+    | Persian | Pirate | Polish | Portuguese (Brazil) |
+    Portuguese (Portugal) | Punjabi | Quechua | Romanian |
+    Romansh | Runyakitara | Russian | Scots Gaelic | Serbian
+    | Serbo-Croatian | Sesotho | Setswana | Seychellois
+    Creole | Shona | Sindhi | Sinhalese | Slovak | Slovenian
+    | Somali | Spanish | Spanish (Latin American) |
+    Sundanese | Swahili | Swedish | Tajik | Tamil | Tatar |
+    Telugu | Thai | Tigrinya | Tonga | Tshiluba | Tumbuka |
+    Turkish | Turkmen | Twi | Uighur | Ukrainian | Urdu |
+    Uzbek | Vietnamese | Welsh | Wolof | Xhosa | Yiddish |
+    Yoruba | Zulu}] [<CommonParameters>] 
 ``` 
-
-### DESCRIPTION 
 
 ### PARAMETERS 
 ```yaml 
  
+``` 
+```yaml 
+    -Language <string>  
+        The language of the returned search results  
+        Required?                    false  
+        Position?                    Named  
+        Accept pipeline input?       false  
+        Parameter set name           (All)  
+        Aliases                      None  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    -Max <int>  
+        The maximum number of results to obtain, defaults to 200  
+        Required?                    false  
+        Position?                    Named  
+        Accept pipeline input?       false  
+        Parameter set name           (All)  
+        Aliases                      None  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    -Queries <string[]>  
+        The query to perform  
+        Required?                    true  
+        Position?                    0  
+        Accept pipeline input?       true (ByValue, ByPropertyName, FromRemainingArguments)  
+        Parameter set name           (All)  
+        Aliases                      q, Name, Text, Query  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    <CommonParameters>  
+        This cmdlet supports the common parameters: Verbose, Debug,  
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,  
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see  
+        about_CommonParameters     (https://go.microsoft.com/fwlink/?LinkID=113216).   
 ``` 
 
 <br/><hr/><br/>
@@ -18056,18 +18237,74 @@ Open-YabAIBattle [[-Language] {Afrikaans | Akan | Albanian |
    Open-AllGoogleLinks                  --> qlinks  
 ``` 
 
-### SYNOPSIS 
-
 ### SYNTAX 
 ```PowerShell 
- 
+Open-AllGoogleLinks [-Queries] <string[]> [-Language
+    {Afrikaans | Akan | Albanian | Amharic | Arabic |
+    Armenian | Azerbaijani | Basque | Belarusian | Bemba |
+    Bengali | Bihari | Bork, bork, bork! | Bosnian | Breton
+    | Bulgarian | Cambodian | Catalan | Cherokee | Chichewa
+    | Chinese (Simplified) | Chinese (Traditional) |
+    Corsican | Croatian | Czech | Danish | Dutch | Elmer
+    Fudd | English | Esperanto | Estonian | Ewe | Faroese |
+    Filipino | Finnish | French | Frisian | Ga | Galician |
+    Georgian | German | Greek | Guarani | Gujarati | Hacker
+    | Haitian Creole | Hausa | Hawaiian | Hebrew | Hindi |
+    Hungarian | Icelandic | Igbo | Indonesian | Interlingua
+    | Irish | Italian | Japanese | Javanese | Kannada |
+    Kazakh | Kinyarwanda | Kirundi | Klingon | Kongo |
+    Korean | Krio (Sierra Leone) | Kurdish | Kurdish
+    (Soranî) | Kyrgyz | Laothian | Latin | Latvian | Lingala
+    | Lithuanian | Lozi | Luganda | Luo | Macedonian |
+    Malagasy | Malay | Malayalam | Maltese | Maori | Marathi
+    | Mauritian Creole | Moldavian | Mongolian | Montenegrin
+    | Nepali | Nigerian Pidgin | Northern Sotho | Norwegian
+    | Norwegian (Nynorsk) | Occitan | Oriya | Oromo | Pashto
+    | Persian | Pirate | Polish | Portuguese (Brazil) |
+    Portuguese (Portugal) | Punjabi | Quechua | Romanian |
+    Romansh | Runyakitara | Russian | Scots Gaelic | Serbian
+    | Serbo-Croatian | Sesotho | Setswana | Seychellois
+    Creole | Shona | Sindhi | Sinhalese | Slovak | Slovenian
+    | Somali | Spanish | Spanish (Latin American) |
+    Sundanese | Swahili | Swedish | Tajik | Tamil | Tatar |
+    Telugu | Thai | Tigrinya | Tonga | Tshiluba | Tumbuka |
+    Turkish | Turkmen | Twi | Uighur | Ukrainian | Urdu |
+    Uzbek | Vietnamese | Welsh | Wolof | Xhosa | Yiddish |
+    Yoruba | Zulu}] [<CommonParameters>] 
 ``` 
-
-### DESCRIPTION 
 
 ### PARAMETERS 
 ```yaml 
  
+``` 
+```yaml 
+    -Language <string>  
+        The language of the returned search results  
+        Required?                    false  
+        Position?                    Named  
+        Accept pipeline input?       false  
+        Parameter set name           (All)  
+        Aliases                      None  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    -Queries <string[]>  
+        The query to perform  
+        Required?                    true  
+        Position?                    0  
+        Accept pipeline input?       true (ByValue, ByPropertyName, FromRemainingArguments)  
+        Parameter set name           (All)  
+        Aliases                      q, Name, Text, Query  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    <CommonParameters>  
+        This cmdlet supports the common parameters: Verbose, Debug,  
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,  
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see  
+        about_CommonParameters     (https://go.microsoft.com/fwlink/?LinkID=113216).   
 ``` 
 
 <br/><hr/><br/>
@@ -18632,18 +18869,32 @@ Open-AllPossibleQueries [-Queries] <String[]> [[-Language]
    ConvertTo-Uris  
 ``` 
 
-### SYNOPSIS 
-
 ### SYNTAX 
 ```PowerShell 
- 
+ConvertTo-Uris [[-Text] <string[]>] [<CommonParameters>] 
 ``` 
-
-### DESCRIPTION 
 
 ### PARAMETERS 
 ```yaml 
  
+``` 
+```yaml 
+    -Text <string[]>  
+        Text input that may contain URIs  
+        Required?                    false  
+        Position?                    0  
+        Accept pipeline input?       true (ByValue)  
+        Parameter set name           (All)  
+        Aliases                      None  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    <CommonParameters>  
+        This cmdlet supports the common parameters: Verbose, Debug,  
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,  
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see  
+        about_CommonParameters     (https://go.microsoft.com/fwlink/?LinkID=113216).   
 ``` 
 
 <br/><hr/><br/>
@@ -22353,18 +22604,32 @@ Open-XGrokQuery [-Queries] <string[]> [[-Language]
    Get-NextAffirmation                  --> WhatAboutIt  
 ``` 
 
-### SYNOPSIS 
-
 ### SYNTAX 
 ```PowerShell 
- 
+Get-NextAffirmation [[-Speak]] [<CommonParameters>] 
 ``` 
-
-### DESCRIPTION 
 
 ### PARAMETERS 
 ```yaml 
  
+``` 
+```yaml 
+    -Speak  
+        Use text-to-speech to speak the affirmation  
+        Required?                    false  
+        Position?                    0  
+        Accept pipeline input?       false  
+        Parameter set name           (All)  
+        Aliases                      None  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    <CommonParameters>  
+        This cmdlet supports the common parameters: Verbose, Debug,  
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,  
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see  
+        about_CommonParameters     (https://go.microsoft.com/fwlink/?LinkID=113216).   
 ``` 
 
 <br/><hr/><br/>
@@ -22376,18 +22641,33 @@ Open-XGrokQuery [-Queries] <string[]> [[-Language]
    Get-WikipediaSummary                 --> wikitxt  
 ``` 
 
-### SYNOPSIS 
-
 ### SYNTAX 
 ```PowerShell 
- 
+Get-WikipediaSummary [-Queries] <string[]>
+    [<CommonParameters>] 
 ``` 
-
-### DESCRIPTION 
 
 ### PARAMETERS 
 ```yaml 
  
+``` 
+```yaml 
+    -Queries <string[]>  
+        The query to perform  
+        Required?                    true  
+        Position?                    0  
+        Accept pipeline input?       true (ByValue, ByPropertyName)  
+        Parameter set name           (All)  
+        Aliases                      q, Name, Text, Query  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    <CommonParameters>  
+        This cmdlet supports the common parameters: Verbose, Debug,  
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,  
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see  
+        about_CommonParameters     (https://go.microsoft.com/fwlink/?LinkID=113216).   
 ``` 
 
 <br/><hr/><br/>
@@ -32427,18 +32707,21 @@ Open-YoutubeQuery [-Queries] <string[]> [[-Language]
    Clear-YoutubeWatched  
 ``` 
 
-### SYNOPSIS 
-
 ### SYNTAX 
 ```PowerShell 
- 
+Clear-YoutubeWatched [<CommonParameters>] 
 ``` 
-
-### DESCRIPTION 
 
 ### PARAMETERS 
 ```yaml 
  
+``` 
+```yaml 
+    <CommonParameters>  
+        This cmdlet supports the common parameters: Verbose, Debug,  
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,  
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see  
+        about_CommonParameters     (https://go.microsoft.com/fwlink/?LinkID=113216).   
 ``` 
 
 <br/><hr/><br/>
@@ -32450,18 +32733,86 @@ Open-YoutubeQuery [-Queries] <string[]> [[-Language]
    Copy-PDFsFromGoogleQuery  
 ``` 
 
-### SYNOPSIS 
-
 ### SYNTAX 
 ```PowerShell 
- 
+Copy-PDFsFromGoogleQuery [-Queries] <string[]> [[-Max]
+    <int>] [[-Language] {Afrikaans | Akan | Albanian |
+    Amharic | Arabic | Armenian | Azerbaijani | Basque |
+    Belarusian | Bemba | Bengali | Bihari | Bork, bork,
+    bork! | Bosnian | Breton | Bulgarian | Cambodian |
+    Catalan | Cherokee | Chichewa | Chinese (Simplified) |
+    Chinese (Traditional) | Corsican | Croatian | Czech |
+    Danish | Dutch | Elmer Fudd | English | Esperanto |
+    Estonian | Ewe | Faroese | Filipino | Finnish | French |
+    Frisian | Ga | Galician | Georgian | German | Greek |
+    Guarani | Gujarati | Hacker | Haitian Creole | Hausa |
+    Hawaiian | Hebrew | Hindi | Hungarian | Icelandic | Igbo
+    | Indonesian | Interlingua | Irish | Italian | Japanese
+    | Javanese | Kannada | Kazakh | Kinyarwanda | Kirundi |
+    Klingon | Kongo | Korean | Krio (Sierra Leone) | Kurdish
+    | Kurdish (Soranî) | Kyrgyz | Laothian | Latin | Latvian
+    | Lingala | Lithuanian | Lozi | Luganda | Luo |
+    Macedonian | Malagasy | Malay | Malayalam | Maltese |
+    Maori | Marathi | Mauritian Creole | Moldavian |
+    Mongolian | Montenegrin | Nepali | Nigerian Pidgin |
+    Northern Sotho | Norwegian | Norwegian (Nynorsk) |
+    Occitan | Oriya | Oromo | Pashto | Persian | Pirate |
+    Polish | Portuguese (Brazil) | Portuguese (Portugal) |
+    Punjabi | Quechua | Romanian | Romansh | Runyakitara |
+    Russian | Scots Gaelic | Serbian | Serbo-Croatian |
+    Sesotho | Setswana | Seychellois Creole | Shona | Sindhi
+    | Sinhalese | Slovak | Slovenian | Somali | Spanish |
+    Spanish (Latin American) | Sundanese | Swahili | Swedish
+    | Tajik | Tamil | Tatar | Telugu | Thai | Tigrinya |
+    Tonga | Tshiluba | Tumbuka | Turkish | Turkmen | Twi |
+    Uighur | Ukrainian | Urdu | Uzbek | Vietnamese | Welsh |
+    Wolof | Xhosa | Yiddish | Yoruba | Zulu}]
+    [<CommonParameters>] 
 ``` 
-
-### DESCRIPTION 
 
 ### PARAMETERS 
 ```yaml 
  
+``` 
+```yaml 
+    -Language <string>  
+        Optional language filter for search results  
+        Required?                    false  
+        Position?                    2  
+        Accept pipeline input?       false  
+        Parameter set name           (All)  
+        Aliases                      None  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    -Max <int>  
+        Maximum number of results to retrieve (default: 200)  
+        Required?                    false  
+        Position?                    1  
+        Accept pipeline input?       false  
+        Parameter set name           (All)  
+        Aliases                      None  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    -Queries <string[]>  
+        The search terms to query Google for PDF files  
+        Required?                    true  
+        Position?                    0  
+        Accept pipeline input?       true (ByValue, ByPropertyName)  
+        Parameter set name           (All)  
+        Aliases                      q, Name, Text, Query  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    <CommonParameters>  
+        This cmdlet supports the common parameters: Verbose, Debug,  
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,  
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see  
+        about_CommonParameters     (https://go.microsoft.com/fwlink/?LinkID=113216).   
 ``` 
 
 <br/><hr/><br/>
@@ -32473,18 +32824,85 @@ Open-YoutubeQuery [-Queries] <string[]> [[-Language]
    Get-GoogleSearchResultUrls           --> qlinksget  
 ``` 
 
-### SYNOPSIS 
-
 ### SYNTAX 
 ```PowerShell 
- 
+Get-GoogleSearchResultUrls [-Queries] <string[]> [-Max
+    <int>] [-Language {Afrikaans | Akan | Albanian | Amharic
+    | Arabic | Armenian | Azerbaijani | Basque | Belarusian
+    | Bemba | Bengali | Bihari | Bork, bork, bork! | Bosnian
+    | Breton | Bulgarian | Cambodian | Catalan | Cherokee |
+    Chichewa | Chinese (Simplified) | Chinese (Traditional)
+    | Corsican | Croatian | Czech | Danish | Dutch | Elmer
+    Fudd | English | Esperanto | Estonian | Ewe | Faroese |
+    Filipino | Finnish | French | Frisian | Ga | Galician |
+    Georgian | German | Greek | Guarani | Gujarati | Hacker
+    | Haitian Creole | Hausa | Hawaiian | Hebrew | Hindi |
+    Hungarian | Icelandic | Igbo | Indonesian | Interlingua
+    | Irish | Italian | Japanese | Javanese | Kannada |
+    Kazakh | Kinyarwanda | Kirundi | Klingon | Kongo |
+    Korean | Krio (Sierra Leone) | Kurdish | Kurdish
+    (Soranî) | Kyrgyz | Laothian | Latin | Latvian | Lingala
+    | Lithuanian | Lozi | Luganda | Luo | Macedonian |
+    Malagasy | Malay | Malayalam | Maltese | Maori | Marathi
+    | Mauritian Creole | Moldavian | Mongolian | Montenegrin
+    | Nepali | Nigerian Pidgin | Northern Sotho | Norwegian
+    | Norwegian (Nynorsk) | Occitan | Oriya | Oromo | Pashto
+    | Persian | Pirate | Polish | Portuguese (Brazil) |
+    Portuguese (Portugal) | Punjabi | Quechua | Romanian |
+    Romansh | Runyakitara | Russian | Scots Gaelic | Serbian
+    | Serbo-Croatian | Sesotho | Setswana | Seychellois
+    Creole | Shona | Sindhi | Sinhalese | Slovak | Slovenian
+    | Somali | Spanish | Spanish (Latin American) |
+    Sundanese | Swahili | Swedish | Tajik | Tamil | Tatar |
+    Telugu | Thai | Tigrinya | Tonga | Tshiluba | Tumbuka |
+    Turkish | Turkmen | Twi | Uighur | Ukrainian | Urdu |
+    Uzbek | Vietnamese | Welsh | Wolof | Xhosa | Yiddish |
+    Yoruba | Zulu}] [<CommonParameters>] 
 ``` 
-
-### DESCRIPTION 
 
 ### PARAMETERS 
 ```yaml 
  
+``` 
+```yaml 
+    -Language <string>  
+        The language of the returned search results  
+        Required?                    false  
+        Position?                    Named  
+        Accept pipeline input?       false  
+        Parameter set name           (All)  
+        Aliases                      None  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    -Max <int>  
+        The maximum number of results to obtain, defaults to 200  
+        Required?                    false  
+        Position?                    Named  
+        Accept pipeline input?       false  
+        Parameter set name           (All)  
+        Aliases                      None  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    -Queries <string[]>  
+        The query to perform  
+        Required?                    true  
+        Position?                    0  
+        Accept pipeline input?       true (ByValue, ByPropertyName, FromRemainingArguments)  
+        Parameter set name           (All)  
+        Aliases                      q, Name, Text, Query  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    <CommonParameters>  
+        This cmdlet supports the common parameters: Verbose, Debug,  
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,  
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see  
+        about_CommonParameters     (https://go.microsoft.com/fwlink/?LinkID=113216).   
 ``` 
 
 <br/><hr/><br/>
@@ -32496,18 +32914,74 @@ Open-YoutubeQuery [-Queries] <string[]> [[-Language]
    Open-AllGoogleLinks                  --> qlinks  
 ``` 
 
-### SYNOPSIS 
-
 ### SYNTAX 
 ```PowerShell 
- 
+Open-AllGoogleLinks [-Queries] <string[]> [-Language
+    {Afrikaans | Akan | Albanian | Amharic | Arabic |
+    Armenian | Azerbaijani | Basque | Belarusian | Bemba |
+    Bengali | Bihari | Bork, bork, bork! | Bosnian | Breton
+    | Bulgarian | Cambodian | Catalan | Cherokee | Chichewa
+    | Chinese (Simplified) | Chinese (Traditional) |
+    Corsican | Croatian | Czech | Danish | Dutch | Elmer
+    Fudd | English | Esperanto | Estonian | Ewe | Faroese |
+    Filipino | Finnish | French | Frisian | Ga | Galician |
+    Georgian | German | Greek | Guarani | Gujarati | Hacker
+    | Haitian Creole | Hausa | Hawaiian | Hebrew | Hindi |
+    Hungarian | Icelandic | Igbo | Indonesian | Interlingua
+    | Irish | Italian | Japanese | Javanese | Kannada |
+    Kazakh | Kinyarwanda | Kirundi | Klingon | Kongo |
+    Korean | Krio (Sierra Leone) | Kurdish | Kurdish
+    (Soranî) | Kyrgyz | Laothian | Latin | Latvian | Lingala
+    | Lithuanian | Lozi | Luganda | Luo | Macedonian |
+    Malagasy | Malay | Malayalam | Maltese | Maori | Marathi
+    | Mauritian Creole | Moldavian | Mongolian | Montenegrin
+    | Nepali | Nigerian Pidgin | Northern Sotho | Norwegian
+    | Norwegian (Nynorsk) | Occitan | Oriya | Oromo | Pashto
+    | Persian | Pirate | Polish | Portuguese (Brazil) |
+    Portuguese (Portugal) | Punjabi | Quechua | Romanian |
+    Romansh | Runyakitara | Russian | Scots Gaelic | Serbian
+    | Serbo-Croatian | Sesotho | Setswana | Seychellois
+    Creole | Shona | Sindhi | Sinhalese | Slovak | Slovenian
+    | Somali | Spanish | Spanish (Latin American) |
+    Sundanese | Swahili | Swedish | Tajik | Tamil | Tatar |
+    Telugu | Thai | Tigrinya | Tonga | Tshiluba | Tumbuka |
+    Turkish | Turkmen | Twi | Uighur | Ukrainian | Urdu |
+    Uzbek | Vietnamese | Welsh | Wolof | Xhosa | Yiddish |
+    Yoruba | Zulu}] [<CommonParameters>] 
 ``` 
-
-### DESCRIPTION 
 
 ### PARAMETERS 
 ```yaml 
  
+``` 
+```yaml 
+    -Language <string>  
+        The language of the returned search results  
+        Required?                    false  
+        Position?                    Named  
+        Accept pipeline input?       false  
+        Parameter set name           (All)  
+        Aliases                      None  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    -Queries <string[]>  
+        The query to perform  
+        Required?                    true  
+        Position?                    0  
+        Accept pipeline input?       true (ByValue, ByPropertyName, FromRemainingArguments)  
+        Parameter set name           (All)  
+        Aliases                      q, Name, Text, Query  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    <CommonParameters>  
+        This cmdlet supports the common parameters: Verbose, Debug,  
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,  
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see  
+        about_CommonParameters     (https://go.microsoft.com/fwlink/?LinkID=113216).   
 ``` 
 
 <br/><hr/><br/>
@@ -36562,18 +37036,32 @@ Open-AllPossibleQueries [-Queries] <String[]> [[-Language]
    ConvertTo-Uris  
 ``` 
 
-### SYNOPSIS 
-
 ### SYNTAX 
 ```PowerShell 
- 
+ConvertTo-Uris [[-Text] <string[]>] [<CommonParameters>] 
 ``` 
-
-### DESCRIPTION 
 
 ### PARAMETERS 
 ```yaml 
  
+``` 
+```yaml 
+    -Text <string[]>  
+        Text input that may contain URIs  
+        Required?                    false  
+        Position?                    0  
+        Accept pipeline input?       true (ByValue)  
+        Parameter set name           (All)  
+        Aliases                      None  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    <CommonParameters>  
+        This cmdlet supports the common parameters: Verbose, Debug,  
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,  
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see  
+        about_CommonParameters     (https://go.microsoft.com/fwlink/?LinkID=113216).   
 ``` 
 
 <br/><hr/><br/>
@@ -40283,18 +40771,32 @@ Open-XGrokQuery [-Queries] <string[]> [[-Language]
    Get-NextAffirmation                  --> WhatAboutIt  
 ``` 
 
-### SYNOPSIS 
-
 ### SYNTAX 
 ```PowerShell 
- 
+Get-NextAffirmation [[-Speak]] [<CommonParameters>] 
 ``` 
-
-### DESCRIPTION 
 
 ### PARAMETERS 
 ```yaml 
  
+``` 
+```yaml 
+    -Speak  
+        Use text-to-speech to speak the affirmation  
+        Required?                    false  
+        Position?                    0  
+        Accept pipeline input?       false  
+        Parameter set name           (All)  
+        Aliases                      None  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    <CommonParameters>  
+        This cmdlet supports the common parameters: Verbose, Debug,  
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,  
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see  
+        about_CommonParameters     (https://go.microsoft.com/fwlink/?LinkID=113216).   
 ``` 
 
 <br/><hr/><br/>
@@ -40306,18 +40808,33 @@ Open-XGrokQuery [-Queries] <string[]> [[-Language]
    Get-WikipediaSummary                 --> wikitxt  
 ``` 
 
-### SYNOPSIS 
-
 ### SYNTAX 
 ```PowerShell 
- 
+Get-WikipediaSummary [-Queries] <string[]>
+    [<CommonParameters>] 
 ``` 
-
-### DESCRIPTION 
 
 ### PARAMETERS 
 ```yaml 
  
+``` 
+```yaml 
+    -Queries <string[]>  
+        The query to perform  
+        Required?                    true  
+        Position?                    0  
+        Accept pipeline input?       true (ByValue, ByPropertyName)  
+        Parameter set name           (All)  
+        Aliases                      q, Name, Text, Query  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    <CommonParameters>  
+        This cmdlet supports the common parameters: Verbose, Debug,  
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,  
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see  
+        about_CommonParameters     (https://go.microsoft.com/fwlink/?LinkID=113216).   
 ``` 
 
 <br/><hr/><br/>
@@ -50357,18 +50874,21 @@ Open-YoutubeQuery [-Queries] <string[]> [[-Language]
    Clear-YoutubeWatched  
 ``` 
 
-### SYNOPSIS 
-
 ### SYNTAX 
 ```PowerShell 
- 
+Clear-YoutubeWatched [<CommonParameters>] 
 ``` 
-
-### DESCRIPTION 
 
 ### PARAMETERS 
 ```yaml 
  
+``` 
+```yaml 
+    <CommonParameters>  
+        This cmdlet supports the common parameters: Verbose, Debug,  
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,  
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see  
+        about_CommonParameters     (https://go.microsoft.com/fwlink/?LinkID=113216).   
 ``` 
 
 <br/><hr/><br/>
@@ -50380,18 +50900,86 @@ Open-YoutubeQuery [-Queries] <string[]> [[-Language]
    Copy-PDFsFromGoogleQuery  
 ``` 
 
-### SYNOPSIS 
-
 ### SYNTAX 
 ```PowerShell 
- 
+Copy-PDFsFromGoogleQuery [-Queries] <string[]> [[-Max]
+    <int>] [[-Language] {Afrikaans | Akan | Albanian |
+    Amharic | Arabic | Armenian | Azerbaijani | Basque |
+    Belarusian | Bemba | Bengali | Bihari | Bork, bork,
+    bork! | Bosnian | Breton | Bulgarian | Cambodian |
+    Catalan | Cherokee | Chichewa | Chinese (Simplified) |
+    Chinese (Traditional) | Corsican | Croatian | Czech |
+    Danish | Dutch | Elmer Fudd | English | Esperanto |
+    Estonian | Ewe | Faroese | Filipino | Finnish | French |
+    Frisian | Ga | Galician | Georgian | German | Greek |
+    Guarani | Gujarati | Hacker | Haitian Creole | Hausa |
+    Hawaiian | Hebrew | Hindi | Hungarian | Icelandic | Igbo
+    | Indonesian | Interlingua | Irish | Italian | Japanese
+    | Javanese | Kannada | Kazakh | Kinyarwanda | Kirundi |
+    Klingon | Kongo | Korean | Krio (Sierra Leone) | Kurdish
+    | Kurdish (Soranî) | Kyrgyz | Laothian | Latin | Latvian
+    | Lingala | Lithuanian | Lozi | Luganda | Luo |
+    Macedonian | Malagasy | Malay | Malayalam | Maltese |
+    Maori | Marathi | Mauritian Creole | Moldavian |
+    Mongolian | Montenegrin | Nepali | Nigerian Pidgin |
+    Northern Sotho | Norwegian | Norwegian (Nynorsk) |
+    Occitan | Oriya | Oromo | Pashto | Persian | Pirate |
+    Polish | Portuguese (Brazil) | Portuguese (Portugal) |
+    Punjabi | Quechua | Romanian | Romansh | Runyakitara |
+    Russian | Scots Gaelic | Serbian | Serbo-Croatian |
+    Sesotho | Setswana | Seychellois Creole | Shona | Sindhi
+    | Sinhalese | Slovak | Slovenian | Somali | Spanish |
+    Spanish (Latin American) | Sundanese | Swahili | Swedish
+    | Tajik | Tamil | Tatar | Telugu | Thai | Tigrinya |
+    Tonga | Tshiluba | Tumbuka | Turkish | Turkmen | Twi |
+    Uighur | Ukrainian | Urdu | Uzbek | Vietnamese | Welsh |
+    Wolof | Xhosa | Yiddish | Yoruba | Zulu}]
+    [<CommonParameters>] 
 ``` 
-
-### DESCRIPTION 
 
 ### PARAMETERS 
 ```yaml 
  
+``` 
+```yaml 
+    -Language <string>  
+        Optional language filter for search results  
+        Required?                    false  
+        Position?                    2  
+        Accept pipeline input?       false  
+        Parameter set name           (All)  
+        Aliases                      None  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    -Max <int>  
+        Maximum number of results to retrieve (default: 200)  
+        Required?                    false  
+        Position?                    1  
+        Accept pipeline input?       false  
+        Parameter set name           (All)  
+        Aliases                      None  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    -Queries <string[]>  
+        The search terms to query Google for PDF files  
+        Required?                    true  
+        Position?                    0  
+        Accept pipeline input?       true (ByValue, ByPropertyName)  
+        Parameter set name           (All)  
+        Aliases                      q, Name, Text, Query  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    <CommonParameters>  
+        This cmdlet supports the common parameters: Verbose, Debug,  
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,  
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see  
+        about_CommonParameters     (https://go.microsoft.com/fwlink/?LinkID=113216).   
 ``` 
 
 <br/><hr/><br/>
@@ -50403,18 +50991,85 @@ Open-YoutubeQuery [-Queries] <string[]> [[-Language]
    Get-GoogleSearchResultUrls           --> qlinksget  
 ``` 
 
-### SYNOPSIS 
-
 ### SYNTAX 
 ```PowerShell 
- 
+Get-GoogleSearchResultUrls [-Queries] <string[]> [-Max
+    <int>] [-Language {Afrikaans | Akan | Albanian | Amharic
+    | Arabic | Armenian | Azerbaijani | Basque | Belarusian
+    | Bemba | Bengali | Bihari | Bork, bork, bork! | Bosnian
+    | Breton | Bulgarian | Cambodian | Catalan | Cherokee |
+    Chichewa | Chinese (Simplified) | Chinese (Traditional)
+    | Corsican | Croatian | Czech | Danish | Dutch | Elmer
+    Fudd | English | Esperanto | Estonian | Ewe | Faroese |
+    Filipino | Finnish | French | Frisian | Ga | Galician |
+    Georgian | German | Greek | Guarani | Gujarati | Hacker
+    | Haitian Creole | Hausa | Hawaiian | Hebrew | Hindi |
+    Hungarian | Icelandic | Igbo | Indonesian | Interlingua
+    | Irish | Italian | Japanese | Javanese | Kannada |
+    Kazakh | Kinyarwanda | Kirundi | Klingon | Kongo |
+    Korean | Krio (Sierra Leone) | Kurdish | Kurdish
+    (Soranî) | Kyrgyz | Laothian | Latin | Latvian | Lingala
+    | Lithuanian | Lozi | Luganda | Luo | Macedonian |
+    Malagasy | Malay | Malayalam | Maltese | Maori | Marathi
+    | Mauritian Creole | Moldavian | Mongolian | Montenegrin
+    | Nepali | Nigerian Pidgin | Northern Sotho | Norwegian
+    | Norwegian (Nynorsk) | Occitan | Oriya | Oromo | Pashto
+    | Persian | Pirate | Polish | Portuguese (Brazil) |
+    Portuguese (Portugal) | Punjabi | Quechua | Romanian |
+    Romansh | Runyakitara | Russian | Scots Gaelic | Serbian
+    | Serbo-Croatian | Sesotho | Setswana | Seychellois
+    Creole | Shona | Sindhi | Sinhalese | Slovak | Slovenian
+    | Somali | Spanish | Spanish (Latin American) |
+    Sundanese | Swahili | Swedish | Tajik | Tamil | Tatar |
+    Telugu | Thai | Tigrinya | Tonga | Tshiluba | Tumbuka |
+    Turkish | Turkmen | Twi | Uighur | Ukrainian | Urdu |
+    Uzbek | Vietnamese | Welsh | Wolof | Xhosa | Yiddish |
+    Yoruba | Zulu}] [<CommonParameters>] 
 ``` 
-
-### DESCRIPTION 
 
 ### PARAMETERS 
 ```yaml 
  
+``` 
+```yaml 
+    -Language <string>  
+        The language of the returned search results  
+        Required?                    false  
+        Position?                    Named  
+        Accept pipeline input?       false  
+        Parameter set name           (All)  
+        Aliases                      None  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    -Max <int>  
+        The maximum number of results to obtain, defaults to 200  
+        Required?                    false  
+        Position?                    Named  
+        Accept pipeline input?       false  
+        Parameter set name           (All)  
+        Aliases                      None  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    -Queries <string[]>  
+        The query to perform  
+        Required?                    true  
+        Position?                    0  
+        Accept pipeline input?       true (ByValue, ByPropertyName, FromRemainingArguments)  
+        Parameter set name           (All)  
+        Aliases                      q, Name, Text, Query  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    <CommonParameters>  
+        This cmdlet supports the common parameters: Verbose, Debug,  
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,  
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see  
+        about_CommonParameters     (https://go.microsoft.com/fwlink/?LinkID=113216).   
 ``` 
 
 <br/><hr/><br/>
@@ -50426,18 +51081,74 @@ Open-YoutubeQuery [-Queries] <string[]> [[-Language]
    Open-AllGoogleLinks                  --> qlinks  
 ``` 
 
-### SYNOPSIS 
-
 ### SYNTAX 
 ```PowerShell 
- 
+Open-AllGoogleLinks [-Queries] <string[]> [-Language
+    {Afrikaans | Akan | Albanian | Amharic | Arabic |
+    Armenian | Azerbaijani | Basque | Belarusian | Bemba |
+    Bengali | Bihari | Bork, bork, bork! | Bosnian | Breton
+    | Bulgarian | Cambodian | Catalan | Cherokee | Chichewa
+    | Chinese (Simplified) | Chinese (Traditional) |
+    Corsican | Croatian | Czech | Danish | Dutch | Elmer
+    Fudd | English | Esperanto | Estonian | Ewe | Faroese |
+    Filipino | Finnish | French | Frisian | Ga | Galician |
+    Georgian | German | Greek | Guarani | Gujarati | Hacker
+    | Haitian Creole | Hausa | Hawaiian | Hebrew | Hindi |
+    Hungarian | Icelandic | Igbo | Indonesian | Interlingua
+    | Irish | Italian | Japanese | Javanese | Kannada |
+    Kazakh | Kinyarwanda | Kirundi | Klingon | Kongo |
+    Korean | Krio (Sierra Leone) | Kurdish | Kurdish
+    (Soranî) | Kyrgyz | Laothian | Latin | Latvian | Lingala
+    | Lithuanian | Lozi | Luganda | Luo | Macedonian |
+    Malagasy | Malay | Malayalam | Maltese | Maori | Marathi
+    | Mauritian Creole | Moldavian | Mongolian | Montenegrin
+    | Nepali | Nigerian Pidgin | Northern Sotho | Norwegian
+    | Norwegian (Nynorsk) | Occitan | Oriya | Oromo | Pashto
+    | Persian | Pirate | Polish | Portuguese (Brazil) |
+    Portuguese (Portugal) | Punjabi | Quechua | Romanian |
+    Romansh | Runyakitara | Russian | Scots Gaelic | Serbian
+    | Serbo-Croatian | Sesotho | Setswana | Seychellois
+    Creole | Shona | Sindhi | Sinhalese | Slovak | Slovenian
+    | Somali | Spanish | Spanish (Latin American) |
+    Sundanese | Swahili | Swedish | Tajik | Tamil | Tatar |
+    Telugu | Thai | Tigrinya | Tonga | Tshiluba | Tumbuka |
+    Turkish | Turkmen | Twi | Uighur | Ukrainian | Urdu |
+    Uzbek | Vietnamese | Welsh | Wolof | Xhosa | Yiddish |
+    Yoruba | Zulu}] [<CommonParameters>] 
 ``` 
-
-### DESCRIPTION 
 
 ### PARAMETERS 
 ```yaml 
  
+``` 
+```yaml 
+    -Language <string>  
+        The language of the returned search results  
+        Required?                    false  
+        Position?                    Named  
+        Accept pipeline input?       false  
+        Parameter set name           (All)  
+        Aliases                      None  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    -Queries <string[]>  
+        The query to perform  
+        Required?                    true  
+        Position?                    0  
+        Accept pipeline input?       true (ByValue, ByPropertyName, FromRemainingArguments)  
+        Parameter set name           (All)  
+        Aliases                      q, Name, Text, Query  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    <CommonParameters>  
+        This cmdlet supports the common parameters: Verbose, Debug,  
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,  
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see  
+        about_CommonParameters     (https://go.microsoft.com/fwlink/?LinkID=113216).   
 ``` 
 
 <br/><hr/><br/>
@@ -54492,18 +55203,32 @@ Open-AllPossibleQueries [-Queries] <String[]> [[-Language]
    ConvertTo-Uris  
 ``` 
 
-### SYNOPSIS 
-
 ### SYNTAX 
 ```PowerShell 
- 
+ConvertTo-Uris [[-Text] <string[]>] [<CommonParameters>] 
 ``` 
-
-### DESCRIPTION 
 
 ### PARAMETERS 
 ```yaml 
  
+``` 
+```yaml 
+    -Text <string[]>  
+        Text input that may contain URIs  
+        Required?                    false  
+        Position?                    0  
+        Accept pipeline input?       true (ByValue)  
+        Parameter set name           (All)  
+        Aliases                      None  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    <CommonParameters>  
+        This cmdlet supports the common parameters: Verbose, Debug,  
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,  
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see  
+        about_CommonParameters     (https://go.microsoft.com/fwlink/?LinkID=113216).   
 ``` 
 
 <br/><hr/><br/>
@@ -58213,18 +58938,32 @@ Open-XGrokQuery [-Queries] <string[]> [[-Language]
    Get-NextAffirmation                  --> WhatAboutIt  
 ``` 
 
-### SYNOPSIS 
-
 ### SYNTAX 
 ```PowerShell 
- 
+Get-NextAffirmation [[-Speak]] [<CommonParameters>] 
 ``` 
-
-### DESCRIPTION 
 
 ### PARAMETERS 
 ```yaml 
  
+``` 
+```yaml 
+    -Speak  
+        Use text-to-speech to speak the affirmation  
+        Required?                    false  
+        Position?                    0  
+        Accept pipeline input?       false  
+        Parameter set name           (All)  
+        Aliases                      None  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    <CommonParameters>  
+        This cmdlet supports the common parameters: Verbose, Debug,  
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,  
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see  
+        about_CommonParameters     (https://go.microsoft.com/fwlink/?LinkID=113216).   
 ``` 
 
 <br/><hr/><br/>
@@ -58236,18 +58975,33 @@ Open-XGrokQuery [-Queries] <string[]> [[-Language]
    Get-WikipediaSummary                 --> wikitxt  
 ``` 
 
-### SYNOPSIS 
-
 ### SYNTAX 
 ```PowerShell 
- 
+Get-WikipediaSummary [-Queries] <string[]>
+    [<CommonParameters>] 
 ``` 
-
-### DESCRIPTION 
 
 ### PARAMETERS 
 ```yaml 
  
+``` 
+```yaml 
+    -Queries <string[]>  
+        The query to perform  
+        Required?                    true  
+        Position?                    0  
+        Accept pipeline input?       true (ByValue, ByPropertyName)  
+        Parameter set name           (All)  
+        Aliases                      q, Name, Text, Query  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    <CommonParameters>  
+        This cmdlet supports the common parameters: Verbose, Debug,  
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,  
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see  
+        about_CommonParameters     (https://go.microsoft.com/fwlink/?LinkID=113216).   
 ``` 
 
 <br/><hr/><br/>
@@ -68287,18 +69041,21 @@ Open-YoutubeQuery [-Queries] <string[]> [[-Language]
    Clear-YoutubeWatched  
 ``` 
 
-### SYNOPSIS 
-
 ### SYNTAX 
 ```PowerShell 
- 
+Clear-YoutubeWatched [<CommonParameters>] 
 ``` 
-
-### DESCRIPTION 
 
 ### PARAMETERS 
 ```yaml 
  
+``` 
+```yaml 
+    <CommonParameters>  
+        This cmdlet supports the common parameters: Verbose, Debug,  
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,  
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see  
+        about_CommonParameters     (https://go.microsoft.com/fwlink/?LinkID=113216).   
 ``` 
 
 <br/><hr/><br/>
@@ -68310,18 +69067,86 @@ Open-YoutubeQuery [-Queries] <string[]> [[-Language]
    Copy-PDFsFromGoogleQuery  
 ``` 
 
-### SYNOPSIS 
-
 ### SYNTAX 
 ```PowerShell 
- 
+Copy-PDFsFromGoogleQuery [-Queries] <string[]> [[-Max]
+    <int>] [[-Language] {Afrikaans | Akan | Albanian |
+    Amharic | Arabic | Armenian | Azerbaijani | Basque |
+    Belarusian | Bemba | Bengali | Bihari | Bork, bork,
+    bork! | Bosnian | Breton | Bulgarian | Cambodian |
+    Catalan | Cherokee | Chichewa | Chinese (Simplified) |
+    Chinese (Traditional) | Corsican | Croatian | Czech |
+    Danish | Dutch | Elmer Fudd | English | Esperanto |
+    Estonian | Ewe | Faroese | Filipino | Finnish | French |
+    Frisian | Ga | Galician | Georgian | German | Greek |
+    Guarani | Gujarati | Hacker | Haitian Creole | Hausa |
+    Hawaiian | Hebrew | Hindi | Hungarian | Icelandic | Igbo
+    | Indonesian | Interlingua | Irish | Italian | Japanese
+    | Javanese | Kannada | Kazakh | Kinyarwanda | Kirundi |
+    Klingon | Kongo | Korean | Krio (Sierra Leone) | Kurdish
+    | Kurdish (Soranî) | Kyrgyz | Laothian | Latin | Latvian
+    | Lingala | Lithuanian | Lozi | Luganda | Luo |
+    Macedonian | Malagasy | Malay | Malayalam | Maltese |
+    Maori | Marathi | Mauritian Creole | Moldavian |
+    Mongolian | Montenegrin | Nepali | Nigerian Pidgin |
+    Northern Sotho | Norwegian | Norwegian (Nynorsk) |
+    Occitan | Oriya | Oromo | Pashto | Persian | Pirate |
+    Polish | Portuguese (Brazil) | Portuguese (Portugal) |
+    Punjabi | Quechua | Romanian | Romansh | Runyakitara |
+    Russian | Scots Gaelic | Serbian | Serbo-Croatian |
+    Sesotho | Setswana | Seychellois Creole | Shona | Sindhi
+    | Sinhalese | Slovak | Slovenian | Somali | Spanish |
+    Spanish (Latin American) | Sundanese | Swahili | Swedish
+    | Tajik | Tamil | Tatar | Telugu | Thai | Tigrinya |
+    Tonga | Tshiluba | Tumbuka | Turkish | Turkmen | Twi |
+    Uighur | Ukrainian | Urdu | Uzbek | Vietnamese | Welsh |
+    Wolof | Xhosa | Yiddish | Yoruba | Zulu}]
+    [<CommonParameters>] 
 ``` 
-
-### DESCRIPTION 
 
 ### PARAMETERS 
 ```yaml 
  
+``` 
+```yaml 
+    -Language <string>  
+        Optional language filter for search results  
+        Required?                    false  
+        Position?                    2  
+        Accept pipeline input?       false  
+        Parameter set name           (All)  
+        Aliases                      None  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    -Max <int>  
+        Maximum number of results to retrieve (default: 200)  
+        Required?                    false  
+        Position?                    1  
+        Accept pipeline input?       false  
+        Parameter set name           (All)  
+        Aliases                      None  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    -Queries <string[]>  
+        The search terms to query Google for PDF files  
+        Required?                    true  
+        Position?                    0  
+        Accept pipeline input?       true (ByValue, ByPropertyName)  
+        Parameter set name           (All)  
+        Aliases                      q, Name, Text, Query  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    <CommonParameters>  
+        This cmdlet supports the common parameters: Verbose, Debug,  
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,  
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see  
+        about_CommonParameters     (https://go.microsoft.com/fwlink/?LinkID=113216).   
 ``` 
 
 <br/><hr/><br/>
@@ -68333,18 +69158,85 @@ Open-YoutubeQuery [-Queries] <string[]> [[-Language]
    Get-GoogleSearchResultUrls           --> qlinksget  
 ``` 
 
-### SYNOPSIS 
-
 ### SYNTAX 
 ```PowerShell 
- 
+Get-GoogleSearchResultUrls [-Queries] <string[]> [-Max
+    <int>] [-Language {Afrikaans | Akan | Albanian | Amharic
+    | Arabic | Armenian | Azerbaijani | Basque | Belarusian
+    | Bemba | Bengali | Bihari | Bork, bork, bork! | Bosnian
+    | Breton | Bulgarian | Cambodian | Catalan | Cherokee |
+    Chichewa | Chinese (Simplified) | Chinese (Traditional)
+    | Corsican | Croatian | Czech | Danish | Dutch | Elmer
+    Fudd | English | Esperanto | Estonian | Ewe | Faroese |
+    Filipino | Finnish | French | Frisian | Ga | Galician |
+    Georgian | German | Greek | Guarani | Gujarati | Hacker
+    | Haitian Creole | Hausa | Hawaiian | Hebrew | Hindi |
+    Hungarian | Icelandic | Igbo | Indonesian | Interlingua
+    | Irish | Italian | Japanese | Javanese | Kannada |
+    Kazakh | Kinyarwanda | Kirundi | Klingon | Kongo |
+    Korean | Krio (Sierra Leone) | Kurdish | Kurdish
+    (Soranî) | Kyrgyz | Laothian | Latin | Latvian | Lingala
+    | Lithuanian | Lozi | Luganda | Luo | Macedonian |
+    Malagasy | Malay | Malayalam | Maltese | Maori | Marathi
+    | Mauritian Creole | Moldavian | Mongolian | Montenegrin
+    | Nepali | Nigerian Pidgin | Northern Sotho | Norwegian
+    | Norwegian (Nynorsk) | Occitan | Oriya | Oromo | Pashto
+    | Persian | Pirate | Polish | Portuguese (Brazil) |
+    Portuguese (Portugal) | Punjabi | Quechua | Romanian |
+    Romansh | Runyakitara | Russian | Scots Gaelic | Serbian
+    | Serbo-Croatian | Sesotho | Setswana | Seychellois
+    Creole | Shona | Sindhi | Sinhalese | Slovak | Slovenian
+    | Somali | Spanish | Spanish (Latin American) |
+    Sundanese | Swahili | Swedish | Tajik | Tamil | Tatar |
+    Telugu | Thai | Tigrinya | Tonga | Tshiluba | Tumbuka |
+    Turkish | Turkmen | Twi | Uighur | Ukrainian | Urdu |
+    Uzbek | Vietnamese | Welsh | Wolof | Xhosa | Yiddish |
+    Yoruba | Zulu}] [<CommonParameters>] 
 ``` 
-
-### DESCRIPTION 
 
 ### PARAMETERS 
 ```yaml 
  
+``` 
+```yaml 
+    -Language <string>  
+        The language of the returned search results  
+        Required?                    false  
+        Position?                    Named  
+        Accept pipeline input?       false  
+        Parameter set name           (All)  
+        Aliases                      None  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    -Max <int>  
+        The maximum number of results to obtain, defaults to 200  
+        Required?                    false  
+        Position?                    Named  
+        Accept pipeline input?       false  
+        Parameter set name           (All)  
+        Aliases                      None  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    -Queries <string[]>  
+        The query to perform  
+        Required?                    true  
+        Position?                    0  
+        Accept pipeline input?       true (ByValue, ByPropertyName, FromRemainingArguments)  
+        Parameter set name           (All)  
+        Aliases                      q, Name, Text, Query  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    <CommonParameters>  
+        This cmdlet supports the common parameters: Verbose, Debug,  
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,  
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see  
+        about_CommonParameters     (https://go.microsoft.com/fwlink/?LinkID=113216).   
 ``` 
 
 <br/><hr/><br/>
@@ -68356,18 +69248,74 @@ Open-YoutubeQuery [-Queries] <string[]> [[-Language]
    Open-AllGoogleLinks                  --> qlinks  
 ``` 
 
-### SYNOPSIS 
-
 ### SYNTAX 
 ```PowerShell 
- 
+Open-AllGoogleLinks [-Queries] <string[]> [-Language
+    {Afrikaans | Akan | Albanian | Amharic | Arabic |
+    Armenian | Azerbaijani | Basque | Belarusian | Bemba |
+    Bengali | Bihari | Bork, bork, bork! | Bosnian | Breton
+    | Bulgarian | Cambodian | Catalan | Cherokee | Chichewa
+    | Chinese (Simplified) | Chinese (Traditional) |
+    Corsican | Croatian | Czech | Danish | Dutch | Elmer
+    Fudd | English | Esperanto | Estonian | Ewe | Faroese |
+    Filipino | Finnish | French | Frisian | Ga | Galician |
+    Georgian | German | Greek | Guarani | Gujarati | Hacker
+    | Haitian Creole | Hausa | Hawaiian | Hebrew | Hindi |
+    Hungarian | Icelandic | Igbo | Indonesian | Interlingua
+    | Irish | Italian | Japanese | Javanese | Kannada |
+    Kazakh | Kinyarwanda | Kirundi | Klingon | Kongo |
+    Korean | Krio (Sierra Leone) | Kurdish | Kurdish
+    (Soranî) | Kyrgyz | Laothian | Latin | Latvian | Lingala
+    | Lithuanian | Lozi | Luganda | Luo | Macedonian |
+    Malagasy | Malay | Malayalam | Maltese | Maori | Marathi
+    | Mauritian Creole | Moldavian | Mongolian | Montenegrin
+    | Nepali | Nigerian Pidgin | Northern Sotho | Norwegian
+    | Norwegian (Nynorsk) | Occitan | Oriya | Oromo | Pashto
+    | Persian | Pirate | Polish | Portuguese (Brazil) |
+    Portuguese (Portugal) | Punjabi | Quechua | Romanian |
+    Romansh | Runyakitara | Russian | Scots Gaelic | Serbian
+    | Serbo-Croatian | Sesotho | Setswana | Seychellois
+    Creole | Shona | Sindhi | Sinhalese | Slovak | Slovenian
+    | Somali | Spanish | Spanish (Latin American) |
+    Sundanese | Swahili | Swedish | Tajik | Tamil | Tatar |
+    Telugu | Thai | Tigrinya | Tonga | Tshiluba | Tumbuka |
+    Turkish | Turkmen | Twi | Uighur | Ukrainian | Urdu |
+    Uzbek | Vietnamese | Welsh | Wolof | Xhosa | Yiddish |
+    Yoruba | Zulu}] [<CommonParameters>] 
 ``` 
-
-### DESCRIPTION 
 
 ### PARAMETERS 
 ```yaml 
  
+``` 
+```yaml 
+    -Language <string>  
+        The language of the returned search results  
+        Required?                    false  
+        Position?                    Named  
+        Accept pipeline input?       false  
+        Parameter set name           (All)  
+        Aliases                      None  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    -Queries <string[]>  
+        The query to perform  
+        Required?                    true  
+        Position?                    0  
+        Accept pipeline input?       true (ByValue, ByPropertyName, FromRemainingArguments)  
+        Parameter set name           (All)  
+        Aliases                      q, Name, Text, Query  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    <CommonParameters>  
+        This cmdlet supports the common parameters: Verbose, Debug,  
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,  
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see  
+        about_CommonParameters     (https://go.microsoft.com/fwlink/?LinkID=113216).   
 ``` 
 
 <br/><hr/><br/>
@@ -72422,18 +73370,32 @@ Open-AllPossibleQueries [-Queries] <String[]> [[-Language]
    ConvertTo-Uris  
 ``` 
 
-### SYNOPSIS 
-
 ### SYNTAX 
 ```PowerShell 
- 
+ConvertTo-Uris [[-Text] <string[]>] [<CommonParameters>] 
 ``` 
-
-### DESCRIPTION 
 
 ### PARAMETERS 
 ```yaml 
  
+``` 
+```yaml 
+    -Text <string[]>  
+        Text input that may contain URIs  
+        Required?                    false  
+        Position?                    0  
+        Accept pipeline input?       true (ByValue)  
+        Parameter set name           (All)  
+        Aliases                      None  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    <CommonParameters>  
+        This cmdlet supports the common parameters: Verbose, Debug,  
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,  
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see  
+        about_CommonParameters     (https://go.microsoft.com/fwlink/?LinkID=113216).   
 ``` 
 
 <br/><hr/><br/>
@@ -76143,18 +77105,32 @@ Open-XGrokQuery [-Queries] <string[]> [[-Language]
    Get-NextAffirmation                  --> WhatAboutIt  
 ``` 
 
-### SYNOPSIS 
-
 ### SYNTAX 
 ```PowerShell 
- 
+Get-NextAffirmation [[-Speak]] [<CommonParameters>] 
 ``` 
-
-### DESCRIPTION 
 
 ### PARAMETERS 
 ```yaml 
  
+``` 
+```yaml 
+    -Speak  
+        Use text-to-speech to speak the affirmation  
+        Required?                    false  
+        Position?                    0  
+        Accept pipeline input?       false  
+        Parameter set name           (All)  
+        Aliases                      None  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    <CommonParameters>  
+        This cmdlet supports the common parameters: Verbose, Debug,  
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,  
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see  
+        about_CommonParameters     (https://go.microsoft.com/fwlink/?LinkID=113216).   
 ``` 
 
 <br/><hr/><br/>
@@ -76166,18 +77142,33 @@ Open-XGrokQuery [-Queries] <string[]> [[-Language]
    Get-WikipediaSummary                 --> wikitxt  
 ``` 
 
-### SYNOPSIS 
-
 ### SYNTAX 
 ```PowerShell 
- 
+Get-WikipediaSummary [-Queries] <string[]>
+    [<CommonParameters>] 
 ``` 
-
-### DESCRIPTION 
 
 ### PARAMETERS 
 ```yaml 
  
+``` 
+```yaml 
+    -Queries <string[]>  
+        The query to perform  
+        Required?                    true  
+        Position?                    0  
+        Accept pipeline input?       true (ByValue, ByPropertyName)  
+        Parameter set name           (All)  
+        Aliases                      q, Name, Text, Query  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    <CommonParameters>  
+        This cmdlet supports the common parameters: Verbose, Debug,  
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,  
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see  
+        about_CommonParameters     (https://go.microsoft.com/fwlink/?LinkID=113216).   
 ``` 
 
 <br/><hr/><br/>
@@ -86217,18 +87208,21 @@ Open-YoutubeQuery [-Queries] <string[]> [[-Language]
    Clear-YoutubeWatched  
 ``` 
 
-### SYNOPSIS 
-
 ### SYNTAX 
 ```PowerShell 
- 
+Clear-YoutubeWatched [<CommonParameters>] 
 ``` 
-
-### DESCRIPTION 
 
 ### PARAMETERS 
 ```yaml 
  
+``` 
+```yaml 
+    <CommonParameters>  
+        This cmdlet supports the common parameters: Verbose, Debug,  
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,  
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see  
+        about_CommonParameters     (https://go.microsoft.com/fwlink/?LinkID=113216).   
 ``` 
 
 <br/><hr/><br/>
@@ -86240,18 +87234,86 @@ Open-YoutubeQuery [-Queries] <string[]> [[-Language]
    Copy-PDFsFromGoogleQuery  
 ``` 
 
-### SYNOPSIS 
-
 ### SYNTAX 
 ```PowerShell 
- 
+Copy-PDFsFromGoogleQuery [-Queries] <string[]> [[-Max]
+    <int>] [[-Language] {Afrikaans | Akan | Albanian |
+    Amharic | Arabic | Armenian | Azerbaijani | Basque |
+    Belarusian | Bemba | Bengali | Bihari | Bork, bork,
+    bork! | Bosnian | Breton | Bulgarian | Cambodian |
+    Catalan | Cherokee | Chichewa | Chinese (Simplified) |
+    Chinese (Traditional) | Corsican | Croatian | Czech |
+    Danish | Dutch | Elmer Fudd | English | Esperanto |
+    Estonian | Ewe | Faroese | Filipino | Finnish | French |
+    Frisian | Ga | Galician | Georgian | German | Greek |
+    Guarani | Gujarati | Hacker | Haitian Creole | Hausa |
+    Hawaiian | Hebrew | Hindi | Hungarian | Icelandic | Igbo
+    | Indonesian | Interlingua | Irish | Italian | Japanese
+    | Javanese | Kannada | Kazakh | Kinyarwanda | Kirundi |
+    Klingon | Kongo | Korean | Krio (Sierra Leone) | Kurdish
+    | Kurdish (Soranî) | Kyrgyz | Laothian | Latin | Latvian
+    | Lingala | Lithuanian | Lozi | Luganda | Luo |
+    Macedonian | Malagasy | Malay | Malayalam | Maltese |
+    Maori | Marathi | Mauritian Creole | Moldavian |
+    Mongolian | Montenegrin | Nepali | Nigerian Pidgin |
+    Northern Sotho | Norwegian | Norwegian (Nynorsk) |
+    Occitan | Oriya | Oromo | Pashto | Persian | Pirate |
+    Polish | Portuguese (Brazil) | Portuguese (Portugal) |
+    Punjabi | Quechua | Romanian | Romansh | Runyakitara |
+    Russian | Scots Gaelic | Serbian | Serbo-Croatian |
+    Sesotho | Setswana | Seychellois Creole | Shona | Sindhi
+    | Sinhalese | Slovak | Slovenian | Somali | Spanish |
+    Spanish (Latin American) | Sundanese | Swahili | Swedish
+    | Tajik | Tamil | Tatar | Telugu | Thai | Tigrinya |
+    Tonga | Tshiluba | Tumbuka | Turkish | Turkmen | Twi |
+    Uighur | Ukrainian | Urdu | Uzbek | Vietnamese | Welsh |
+    Wolof | Xhosa | Yiddish | Yoruba | Zulu}]
+    [<CommonParameters>] 
 ``` 
-
-### DESCRIPTION 
 
 ### PARAMETERS 
 ```yaml 
  
+``` 
+```yaml 
+    -Language <string>  
+        Optional language filter for search results  
+        Required?                    false  
+        Position?                    2  
+        Accept pipeline input?       false  
+        Parameter set name           (All)  
+        Aliases                      None  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    -Max <int>  
+        Maximum number of results to retrieve (default: 200)  
+        Required?                    false  
+        Position?                    1  
+        Accept pipeline input?       false  
+        Parameter set name           (All)  
+        Aliases                      None  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    -Queries <string[]>  
+        The search terms to query Google for PDF files  
+        Required?                    true  
+        Position?                    0  
+        Accept pipeline input?       true (ByValue, ByPropertyName)  
+        Parameter set name           (All)  
+        Aliases                      q, Name, Text, Query  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    <CommonParameters>  
+        This cmdlet supports the common parameters: Verbose, Debug,  
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,  
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see  
+        about_CommonParameters     (https://go.microsoft.com/fwlink/?LinkID=113216).   
 ``` 
 
 <br/><hr/><br/>
@@ -86263,18 +87325,85 @@ Open-YoutubeQuery [-Queries] <string[]> [[-Language]
    Get-GoogleSearchResultUrls           --> qlinksget  
 ``` 
 
-### SYNOPSIS 
-
 ### SYNTAX 
 ```PowerShell 
- 
+Get-GoogleSearchResultUrls [-Queries] <string[]> [-Max
+    <int>] [-Language {Afrikaans | Akan | Albanian | Amharic
+    | Arabic | Armenian | Azerbaijani | Basque | Belarusian
+    | Bemba | Bengali | Bihari | Bork, bork, bork! | Bosnian
+    | Breton | Bulgarian | Cambodian | Catalan | Cherokee |
+    Chichewa | Chinese (Simplified) | Chinese (Traditional)
+    | Corsican | Croatian | Czech | Danish | Dutch | Elmer
+    Fudd | English | Esperanto | Estonian | Ewe | Faroese |
+    Filipino | Finnish | French | Frisian | Ga | Galician |
+    Georgian | German | Greek | Guarani | Gujarati | Hacker
+    | Haitian Creole | Hausa | Hawaiian | Hebrew | Hindi |
+    Hungarian | Icelandic | Igbo | Indonesian | Interlingua
+    | Irish | Italian | Japanese | Javanese | Kannada |
+    Kazakh | Kinyarwanda | Kirundi | Klingon | Kongo |
+    Korean | Krio (Sierra Leone) | Kurdish | Kurdish
+    (Soranî) | Kyrgyz | Laothian | Latin | Latvian | Lingala
+    | Lithuanian | Lozi | Luganda | Luo | Macedonian |
+    Malagasy | Malay | Malayalam | Maltese | Maori | Marathi
+    | Mauritian Creole | Moldavian | Mongolian | Montenegrin
+    | Nepali | Nigerian Pidgin | Northern Sotho | Norwegian
+    | Norwegian (Nynorsk) | Occitan | Oriya | Oromo | Pashto
+    | Persian | Pirate | Polish | Portuguese (Brazil) |
+    Portuguese (Portugal) | Punjabi | Quechua | Romanian |
+    Romansh | Runyakitara | Russian | Scots Gaelic | Serbian
+    | Serbo-Croatian | Sesotho | Setswana | Seychellois
+    Creole | Shona | Sindhi | Sinhalese | Slovak | Slovenian
+    | Somali | Spanish | Spanish (Latin American) |
+    Sundanese | Swahili | Swedish | Tajik | Tamil | Tatar |
+    Telugu | Thai | Tigrinya | Tonga | Tshiluba | Tumbuka |
+    Turkish | Turkmen | Twi | Uighur | Ukrainian | Urdu |
+    Uzbek | Vietnamese | Welsh | Wolof | Xhosa | Yiddish |
+    Yoruba | Zulu}] [<CommonParameters>] 
 ``` 
-
-### DESCRIPTION 
 
 ### PARAMETERS 
 ```yaml 
  
+``` 
+```yaml 
+    -Language <string>  
+        The language of the returned search results  
+        Required?                    false  
+        Position?                    Named  
+        Accept pipeline input?       false  
+        Parameter set name           (All)  
+        Aliases                      None  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    -Max <int>  
+        The maximum number of results to obtain, defaults to 200  
+        Required?                    false  
+        Position?                    Named  
+        Accept pipeline input?       false  
+        Parameter set name           (All)  
+        Aliases                      None  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    -Queries <string[]>  
+        The query to perform  
+        Required?                    true  
+        Position?                    0  
+        Accept pipeline input?       true (ByValue, ByPropertyName, FromRemainingArguments)  
+        Parameter set name           (All)  
+        Aliases                      q, Name, Text, Query  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    <CommonParameters>  
+        This cmdlet supports the common parameters: Verbose, Debug,  
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,  
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see  
+        about_CommonParameters     (https://go.microsoft.com/fwlink/?LinkID=113216).   
 ``` 
 
 <br/><hr/><br/>
@@ -86286,18 +87415,74 @@ Open-YoutubeQuery [-Queries] <string[]> [[-Language]
    Open-AllGoogleLinks                  --> qlinks  
 ``` 
 
-### SYNOPSIS 
-
 ### SYNTAX 
 ```PowerShell 
- 
+Open-AllGoogleLinks [-Queries] <string[]> [-Language
+    {Afrikaans | Akan | Albanian | Amharic | Arabic |
+    Armenian | Azerbaijani | Basque | Belarusian | Bemba |
+    Bengali | Bihari | Bork, bork, bork! | Bosnian | Breton
+    | Bulgarian | Cambodian | Catalan | Cherokee | Chichewa
+    | Chinese (Simplified) | Chinese (Traditional) |
+    Corsican | Croatian | Czech | Danish | Dutch | Elmer
+    Fudd | English | Esperanto | Estonian | Ewe | Faroese |
+    Filipino | Finnish | French | Frisian | Ga | Galician |
+    Georgian | German | Greek | Guarani | Gujarati | Hacker
+    | Haitian Creole | Hausa | Hawaiian | Hebrew | Hindi |
+    Hungarian | Icelandic | Igbo | Indonesian | Interlingua
+    | Irish | Italian | Japanese | Javanese | Kannada |
+    Kazakh | Kinyarwanda | Kirundi | Klingon | Kongo |
+    Korean | Krio (Sierra Leone) | Kurdish | Kurdish
+    (Soranî) | Kyrgyz | Laothian | Latin | Latvian | Lingala
+    | Lithuanian | Lozi | Luganda | Luo | Macedonian |
+    Malagasy | Malay | Malayalam | Maltese | Maori | Marathi
+    | Mauritian Creole | Moldavian | Mongolian | Montenegrin
+    | Nepali | Nigerian Pidgin | Northern Sotho | Norwegian
+    | Norwegian (Nynorsk) | Occitan | Oriya | Oromo | Pashto
+    | Persian | Pirate | Polish | Portuguese (Brazil) |
+    Portuguese (Portugal) | Punjabi | Quechua | Romanian |
+    Romansh | Runyakitara | Russian | Scots Gaelic | Serbian
+    | Serbo-Croatian | Sesotho | Setswana | Seychellois
+    Creole | Shona | Sindhi | Sinhalese | Slovak | Slovenian
+    | Somali | Spanish | Spanish (Latin American) |
+    Sundanese | Swahili | Swedish | Tajik | Tamil | Tatar |
+    Telugu | Thai | Tigrinya | Tonga | Tshiluba | Tumbuka |
+    Turkish | Turkmen | Twi | Uighur | Ukrainian | Urdu |
+    Uzbek | Vietnamese | Welsh | Wolof | Xhosa | Yiddish |
+    Yoruba | Zulu}] [<CommonParameters>] 
 ``` 
-
-### DESCRIPTION 
 
 ### PARAMETERS 
 ```yaml 
  
+``` 
+```yaml 
+    -Language <string>  
+        The language of the returned search results  
+        Required?                    false  
+        Position?                    Named  
+        Accept pipeline input?       false  
+        Parameter set name           (All)  
+        Aliases                      None  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    -Queries <string[]>  
+        The query to perform  
+        Required?                    true  
+        Position?                    0  
+        Accept pipeline input?       true (ByValue, ByPropertyName, FromRemainingArguments)  
+        Parameter set name           (All)  
+        Aliases                      q, Name, Text, Query  
+        Dynamic?                     false  
+        Accept wildcard characters?  false  
+``` 
+```yaml 
+    <CommonParameters>  
+        This cmdlet supports the common parameters: Verbose, Debug,  
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,  
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see  
+        about_CommonParameters     (https://go.microsoft.com/fwlink/?LinkID=113216).   
 ``` 
 
 <br/><hr/><br/>

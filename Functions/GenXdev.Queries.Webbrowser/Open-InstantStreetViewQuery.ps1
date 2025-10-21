@@ -2,7 +2,7 @@
 Part of PowerShell module : GenXdev.Queries.Webbrowser
 Original cmdlet filename  : Open-InstantStreetViewQuery.ps1
 Original author           : René Vaessen / GenXdev
-Version                   : 1.302.2025
+Version                   : 1.304.2025
 ################################################################################
 Copyright (c)  René Vaessen / GenXdev
 

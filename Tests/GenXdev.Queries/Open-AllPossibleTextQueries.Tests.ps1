@@ -1,8 +1,8 @@
-﻿<##############################################################################
+<##############################################################################
 Part of PowerShell module : GenXdev.Queries
 Original cmdlet filename  : Open-AllPossibleTextQueries.Tests.ps1
 Original author           : René Vaessen / GenXdev
-Version                   : 1.302.2025
+Version                   : 1.304.2025
 ################################################################################
 Copyright (c)  René Vaessen / GenXdev
 
