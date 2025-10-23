@@ -12,7 +12,7 @@
 RootModule = 'GenXdev.Queries.psm1'
 
 # Version number of this module.
-ModuleVersion = '1.308.2025'
+ModuleVersion = '2.1.2025'
 
 # Supported PSEditions
 CompatiblePSEditions = 'Core'
@@ -33,7 +33,7 @@ Copyright = 'Copyright 2021-2025 GenXdev'
 Description = 'A Windows PowerShell module for finding resources and information on the internet'
 
 # Minimum version of the PowerShell engine required by this module
-PowerShellVersion = '7.5.0'
+PowerShellVersion = '7.5.4'
 
 # Name of the PowerShell host required by this module
 # PowerShellHostName = ''
@@ -51,7 +51,7 @@ ClrVersion = '9.0.0.1'
 ProcessorArchitecture = 'Amd64'
 
 # Modules that must be imported into the global environment prior to importing this module
-RequiredModules = @(@{ModuleName = 'GenXdev.Console'; ModuleVersion = '1.308.2025'; })
+RequiredModules = @(@{ModuleName = 'GenXdev.Console'; ModuleVersion = '2.1.2025'; })
 
 # Assemblies that must be loaded prior to importing this module
 RequiredAssemblies = 'lib\GenXdev.Queries.dll'
@@ -116,9 +116,6 @@ FileList = '.gitignore', 'GenXdev.Queries.AI.psm1', 'GenXdev.Queries.csproj',
                'GenXdev.Queries.Websites.psm1', 'LICENSE', 'powershell.jpg', 
                'README.md', 'lib\GenXdev.Queries.deps.json', 
                'lib\GenXdev.Queries.dll', 
-               'Functions\GenXdev.Queries\ConvertTo-Uris.cs', 
-               'Functions\GenXdev.Queries\Invoke-WebbrowserTabPollingScript.ps1', 
-               'Functions\GenXdev.Queries\Open-AllPossibleQueries.ps1', 
                'Functions\GenXdev.Queries.AI\Open-BingCopilotQuery.ps1', 
                'Functions\GenXdev.Queries.AI\Open-ChatGPTQuery.ps1', 
                'Functions\GenXdev.Queries.AI\Open-CloudLLMChat.ps1', 
@@ -126,8 +123,9 @@ FileList = '.gitignore', 'GenXdev.Queries.AI.psm1', 'GenXdev.Queries.csproj',
                'Functions\GenXdev.Queries.AI\Open-GithubCopilotQuery.ps1', 
                'Functions\GenXdev.Queries.AI\Open-GoogleGeminiQuery.ps1', 
                'Functions\GenXdev.Queries.AI\Open-XGrokQuery.ps1', 
-               'Functions\GenXdev.Queries.Text\Get-NextAffirmation.cs', 
-               'Functions\GenXdev.Queries.Text\Get-WikipediaSummary.cs', 
+               'Functions\GenXdev.Queries\ConvertTo-Uris.cs', 
+               'Functions\GenXdev.Queries\Invoke-WebbrowserTabPollingScript.ps1', 
+               'Functions\GenXdev.Queries\Open-AllPossibleQueries.ps1', 
                'Functions\GenXdev.Queries.Webbrowser\Clear-YoutubeWatched.cs', 
                'Functions\GenXdev.Queries.Webbrowser\Copy-PDFsFromGoogleQuery.cs', 
                'Functions\GenXdev.Queries.Webbrowser\Get-GoogleSearchResultUrls.cs', 
@@ -139,17 +137,11 @@ FileList = '.gitignore', 'GenXdev.Queries.AI.psm1', 'GenXdev.Queries.csproj',
                'Functions\GenXdev.Queries.Webbrowser\Open-BuiltWithSiteInfo.ps1', 
                'Functions\GenXdev.Queries.Webbrowser\Open-GithubQuery.ps1', 
                'Functions\GenXdev.Queries.Webbrowser\Open-GoogleQuery.ps1', 
-               'Functions\GenXdev.Queries.Websites\Open-GameOfLife.ps1', 
                'Functions\GenXdev.Queries.Webbrowser\Open-GoogleSiteInfo.ps1', 
-               'Functions\GenXdev.Queries.Websites\Open-GenXdevAppCatalog.ps1', 
                'Functions\GenXdev.Queries.Webbrowser\Open-IMDBQuery.ps1', 
-               'Functions\GenXdev.Queries.Websites\Open-Timeline.ps1', 
                'Functions\GenXdev.Queries.Webbrowser\Open-InstantStreetViewQuery.ps1', 
-               'Functions\GenXdev.Queries.Websites\Open-ViralSimulation.ps1', 
                'Functions\GenXdev.Queries.Webbrowser\Open-MovieQuote.ps1', 
-               'Functions\GenXdev.Queries.Websites\Open-Yab.ps1', 
                'Functions\GenXdev.Queries.Webbrowser\Open-SearchEngine.ps1', 
-               'Functions\GenXdev.Queries.Websites\Open-YabAIBattle.ps1', 
                'Functions\GenXdev.Queries.Webbrowser\Open-SimularWebSiteInfo.ps1', 
                'Functions\GenXdev.Queries.Webbrowser\Open-StackOverflowQuery.ps1', 
                'Functions\GenXdev.Queries.Webbrowser\Open-WaybackMachineSiteInfo.ps1', 
@@ -159,20 +151,15 @@ FileList = '.gitignore', 'GenXdev.Queries.AI.psm1', 'GenXdev.Queries.csproj',
                'Functions\GenXdev.Queries.Webbrowser\Open-WikipediaQuery.ps1', 
                'Functions\GenXdev.Queries.Webbrowser\Open-WolframAlphaQuery.ps1', 
                'Functions\GenXdev.Queries.Webbrowser\Open-YoutubeQuery.ps1', 
-               'lib\lib\Microsoft.Extensions.Configuration.UserSecrets.dll', 
-               'lib\runtimes\win-arm64\ggml-base-whisper.dll', 
-               'lib\runtimes\win-arm64\ggml-cpu-whisper.dll', 
-               'lib\runtimes\win-arm64\ggml-whisper.dll', 
-               'lib\runtimes\win-arm64\whisper.dll', 
-               'Tests\GenXdev.Queries\Open-AllPossibleTextQueries.Tests.ps1', 
-               'lib\runtimes\win-x64\ggml-base-whisper.dll', 
-               'lib\runtimes\win-x64\ggml-cpu-whisper.dll', 
-               'lib\runtimes\win-x64\ggml-whisper.dll', 
-               'lib\runtimes\win-x64\whisper.dll', 
-               'lib\runtimes\win-x86\ggml-base-whisper.dll', 
-               'lib\runtimes\win-x86\ggml-cpu-whisper.dll', 
-               'lib\runtimes\win-x86\ggml-whisper.dll', 
-               'lib\runtimes\win-x86\whisper.dll'
+               'Functions\GenXdev.Queries.Text\Get-NextAffirmation.cs', 
+               'Functions\GenXdev.Queries.Text\Get-WikipediaSummary.cs', 
+               'Functions\GenXdev.Queries.Websites\Open-GameOfLife.ps1', 
+               'Functions\GenXdev.Queries.Websites\Open-GenXdevAppCatalog.ps1', 
+               'Functions\GenXdev.Queries.Websites\Open-Timeline.ps1', 
+               'Functions\GenXdev.Queries.Websites\Open-ViralSimulation.ps1', 
+               'Functions\GenXdev.Queries.Websites\Open-Yab.ps1', 
+               'Functions\GenXdev.Queries.Websites\Open-YabAIBattle.ps1', 
+               'Tests\GenXdev.Queries\Open-AllPossibleTextQueries.Tests.ps1'
 
 # Private data to pass to the module specified in RootModule/ModuleToProcess. This may also contain a PSData hashtable with additional module metadata used by PowerShell.
 PrivateData = @{
